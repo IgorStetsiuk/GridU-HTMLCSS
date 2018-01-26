@@ -1,0 +1,16 @@
+@import "../utils/variables";
+
+header {
+  border-bottom: 3px solid $color-light-green;
+  background: $color-dark-green;
+
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+  }
+
+}

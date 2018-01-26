@@ -1,0 +1,76 @@
+/*    Styles for Main layout   */
+@import "../utils/variables";
+@import "../utils/miscs";
+@import "../header/header";
+@import "../footer/footer";
+
+.content {
+  background-color: $color-pad;
+}
+
+/*   Styles for products   */
+
+.product-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 20px 20px 0;
+
+  & .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 345px;
+    background-color: $color-white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+
+    &  p {
+      color: $color-black;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__name {
+      border-bottom: 2px solid #333;
+      margin: 15px 0;
+    }
+
+    &__buy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 300px;
+      padding: 10px;
+
+      & > span {
+        color: brown;
+        font-size: 20px;
+      }
+
+      & > button {
+        padding: 10px 20px;
+        background-color: #28a3a5;
+        border-radius: 5px;
+        color: $color-white;
+
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1164px) {
+  .products-list {
+    justify-content: space-around;
+  }
+}

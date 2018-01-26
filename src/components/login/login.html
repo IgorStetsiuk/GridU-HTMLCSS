@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" href="../compile/login/login.css">
+    <link rel="stylesheet" href="../compile/modal/modal.css">
+</head>
+<body>
+<!--<section>-->
+    <!--&lt;!&ndash;<button id="open-modal">Open modal</button>&ndash;&gt;-->
+    <!--<div class="register">-->
+        <!--<div class="register-form">-->
+            <!--<form class="form">-->
+                <!--<input class="form-input" type="text" minlength="4" maxlength="12" placeholder="Login" required>-->
+                <!--<input class="form-input" type="password" minlength="4" maxlength="12" placeholder="Password" required>-->
+                <!--<button class="btn">Submit</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<div class="login-page__content">
+    <button class="btn" id="myBtn">Login</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-title">
+                <h5>Login to Demo Shop</h5>
+            </div>
+            <div class="register-form">
+                <form class="form">
+                    <input class="form-input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
+                    <input class="form-input" type="password" minlength="4" maxlength="12" placeholder="Password" required>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal"></div>
+</body>
+<script src="../modal/modal.js"></script>
+</html>

@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.login-page__content {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+}
+
+.modal-title {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+
+.form-input {
+  width: 50%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-input:invalid {
+  border: 2px solid red;
+}
+
+.form-input:valid {
+  border: 2px solid #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #28a3a5;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/*   Styles for pure Modal window   */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #E8E8E8;
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-input {
+    width: 70%;
+  }
+  .modal-content {
+    width: 80%;
+  }
+}
