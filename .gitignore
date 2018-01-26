@@ -1,0 +1,14 @@
+# IDE ignores
+.idea/
+.vscode/
+*.iml
+*.sublime*
+
+# common ignores
+node_modules
+*.log
+*.log.*
+.DS_STORE
+.DS_Store
+._*
+package-lock.json

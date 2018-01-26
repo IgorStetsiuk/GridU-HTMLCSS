@@ -1,0 +1,25 @@
+{
+  "name": "interns-projects",
+  "version": "1.0.0",
+  "description": "Goal of the project to provide the platform to write algoritms, tests and get markup knowledge",
+  "scripts": {
+    "test": "jest",
+    "dev": "npm run build && npm run watch",
+    "watch": "gulp sass-watch",
+    "build": "gulp sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "jest": "^21.1.0",
+    "regenerator-runtime": "^0.11.0"
+  }
+}
