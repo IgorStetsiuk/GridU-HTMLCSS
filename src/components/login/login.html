@@ -7,38 +7,31 @@
     <link rel="stylesheet" href="../compile/modal/modal.css">
 </head>
 <body>
-<!--<section>-->
-    <!--&lt;!&ndash;<button id="open-modal">Open modal</button>&ndash;&gt;-->
-    <!--<div class="register">-->
-        <!--<div class="register-form">-->
-            <!--<form class="form">-->
-                <!--<input class="form-input" type="text" minlength="4" maxlength="12" placeholder="Login" required>-->
-                <!--<input class="form-input" type="password" minlength="4" maxlength="12" placeholder="Password" required>-->
-                <!--<button class="btn">Submit</button>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
 
-<div class="login-page__content">
-    <button class="btn" id="myBtn">Login</button>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-title">
+<section>
+    <button class="open-modal" data-modalName="login">Login</button>
+</section>
+
+
+<div class="modal" data-modalName="login">
+    <div class="modal-content">
+        <span class="close-sign close-modal">&times;</span>
+
+        <div class="login">
+            <div class="login__title">
                 <h5>Login to Demo Shop</h5>
             </div>
-            <div class="register-form">
+            <div class="login__form">
                 <form class="form">
-                    <input class="form-input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
-                    <input class="form-input" type="password" minlength="4" maxlength="12" placeholder="Password" required>
-                    <button class="btn">Submit</button>
+                    <input class="form__input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
+                    <input class="form__input" type="password" minlength="4" maxlength="12" placeholder="Password"
+                           required>
+                    <button class="close-modal btn">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div id="modal"></div>
 </body>
 <script src="../modal/modal.js"></script>
 </html>

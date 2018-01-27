@@ -1,0 +1,41 @@
+/* The Modal (background) */
+@import "../utils/variables";
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-sign {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  color: $color-pad;
+  font-size: 28px;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: $color-black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
