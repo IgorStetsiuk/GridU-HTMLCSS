@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product admin page</title>
+    <link rel="stylesheet" href="../../compile/pages/product_admin/product_admin.css">
+    <link rel="stylesheet" href="../../compile/shared/modal/modal.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-wrap">
+            <div class="logo"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></div>
+            <div class="user">
+                <span>User name</span>
+                <i><i class="fa fa-user " aria-hidden="true"></i></i>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="content">
+            <div class="header-info">
+                <p>Back</p>
+                <p>Category: <b>Phone</b></p>
+            </div>
+            <div class="products-list">
+                <div class="product">
+                    <img class="product-img"
+                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
+                         alt="img">
+                    <div class="product-info">
+                        <div class="product-description">
+                            <h3 class="product-name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores non odit quod recusandae repellat sapiente ullam.</p>
+                        </div>
+                        <nav class="product-tools">
+                            You can
+                            <a class="open-modal" data-modalName="add">add more.</a>
+                            You can also
+                            <a class="open-modal" data-modalName="edit">edit</a>
+                            details or
+                            <a class="open-modal" data-modalName="delete">delete</a>
+                            them.
+                        </nav>
+                        <div class="buy-item">
+                            <p class="item-price">$Price</p>
+                            <button class="open-modal btn" data-modalName="buy">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---------------------Modals------------------->
+<div class="modal" data-modalName="add">
+    <div class="modal-content">
+        <span class="close-sign close-modal">&times;</span>
+        <p>Add item layout</p>
+    </div>
+</div>
+<div class="modal" data-modalName="edit">
+    <div class="modal-content">
+        <span class="close-sign close-modal">&times;</span>
+        <p>Edit item layout</p>
+    </div>
+</div>
+<div class="modal" data-modalName="delete">
+    <div class="modal-content">
+        <span class="close-sign close-modal">&times;</span>
+        <p>Delate modal layout</p>
+    </div>
+</div>
+<div class="modal" data-modalName="buy">
+    <div class="modal-content">
+        <span class="close-sign close-modal">&times;</span>
+        <p>Buy modal layout</p>
+    </div>
+</div>
+
+<footer>
+    <span>Copyright Test site 2018</span>
+</footer>
+
+<script src="../../shared/modal/modal.js"></script>
+</body>
+</html>
