@@ -1,5 +1,6 @@
 @import "../../utils/variables";
 @import "../../utils/miscs";
+@import "../../shared/modal/modal";
 
 section {
   display: flex;
@@ -12,7 +13,7 @@ section {
     background-color: #28a3a5;
     border-radius: 5px;
     color: $color-white;
-    cursor: pointer;
+
   }
 }
 .login {
@@ -57,21 +58,7 @@ section {
 
 .btn {
   align-self: flex-end;
-  padding: 10px 20px;
   margin-top: 20px;
-  background-color: #28a3a5;
-  border-radius: 5px;
-  color: $color-white;
-
-
-  &:focus {
-    outline: none;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
 }
 
 @media only screen and (max-width: 1000px) {

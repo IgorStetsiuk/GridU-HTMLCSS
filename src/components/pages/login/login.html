@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login page</title>
-    <link rel="stylesheet" href="../../compile/login/login.css">
-    <link rel="stylesheet" href="../../compile/modal/modal.css">
+    <link rel="stylesheet" href="../../compile/pages/login/login.css">
 </head>
 <body>
 
@@ -12,15 +11,13 @@
     <button class="open-modal" data-modalName="login">Login</button>
 </section>
 
-
 <div class="modal" data-modalName="login">
-    <div class="modal-content">
-        <span class="close-sign close-modal">&times;</span>
-
-        <div class="login">
-            <div class="login__title">
-                <h5>Login to Demo Shop</h5>
-            </div>
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Login to Demo Shop</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
             <div class="login__form">
                 <form class="form">
                     <input class="form__input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
