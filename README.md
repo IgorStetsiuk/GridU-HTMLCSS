@@ -3,6 +3,7 @@
 
 ```
  > git clone https://github.com/IgorStetsiuk/GridU-HTMLCSS.git
+ > cd GridU-HTMLCSS
  > npm install
  > npm run dev
 ```
