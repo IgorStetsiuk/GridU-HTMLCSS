@@ -10,17 +10,13 @@
  *  Main idea: On the page can be many modals windows with it`s content, all of them are hidden by default
  *  every modal has it`s appropriate trigger (button(s)).
  *
- *  Requirements: for now structure of modal must be @see { modalStructure } below
+ *  Requirements: for now structure of modal must be @see { modalStructure }
  */
 
 const modalContents = document.getElementsByClassName('modal');
 const modalTriggers = document.getElementsByClassName('open-modal');
 
 let isModalOpen = false;
-
-// const modalClassesList = ['modal','close-modal','active','modal active','open-modal'];
-
-
 
 (function () {
     if(modalContents.length && modalTriggers.length) {
@@ -31,9 +27,6 @@ let isModalOpen = false;
 function enableModal() {
     document.body.onclick = function (e) {
         const target = e.target;
-
-        // // check if target concerns modal window, else don`t execute this handler
-        // if(!modalClassesList.includes(target.className)) return;
 
         const activeModal = document.querySelector('.modal.active');
 
@@ -69,13 +62,16 @@ function close(modal) {
 
 }
 
-/**
- *
- * Part of documentation
- */
-const modalStructure  = `
+// example of modal structure on the page
+const modalStructure = (content) => { `
 <div class="modal" data-modalName="example">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Buy</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
+           ${content}
+        </div>
     </div>
-</div>`;
+</div>`};

@@ -30,12 +30,12 @@
             </div>
             <div class="products-list">
                 <div class="product">
-                    <img class="product-img"
+                    <img class="product__img"
                          src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
                          alt="img">
-                    <div class="product-info">
+                    <div class="product__info">
                         <div class="product-description">
-                            <h3 class="product-name">Name of product</h3>
+                            <h3 class="product__name">Name of product</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
                                 maiores non odit quod recusandae repellat sapiente ullam.</p>
                         </div>
@@ -59,29 +59,114 @@
     </div>
 </section>
 
-<!---------------------Modals------------------->
-<div class="modal" data-modalName="add">
-    <div class="modal-content">
-        <span class="close-sign close-modal">&times;</span>
-        <p>Add item layout</p>
-    </div>
-</div>
+<!--------------------------Modals-------------------------->
+<!--___Edit modal___-->
 <div class="modal" data-modalName="edit">
-    <div class="modal-content">
-        <span class="close-sign close-modal">&times;</span>
-        <p>Edit item layout</p>
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Edit product</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
+            <div class="modal-edit">
+                <div class="modal-edit__top">
+                    <div class="modal-edit__left">
+                        <div class="modal-edit__content">
+                            <p>Name</p>
+                            <input class="modal-edit__input" type="text" placeholder="Name">
+                            <p>Category</p>
+                            <select class="modal-edit__input">
+                                <option>Active wear</option>
+                                <option>Sport wear</option>
+                                <option>Casual wear</option>
+                            </select>
+                            <p>Gender</p>
+                            <div class="modal-edit__radio">
+                                <label>
+                                    <input type="radio" name="gender">
+                                    Male
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender">
+                                    Female
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender">
+                                    Unisex
+                                </label>
+                            </div>
+                            <p>Description</p>
+                            <textarea class="modal-edit__input" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-edit__right">
+                        <div class="modal-edit__content">
+                            <p>Link to image:</p>
+                            <input class="modal-edit__input" type="text">
+                            <img class="product-img"
+                                 src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
+                                 alt="img">
+                            <p>Price:</p>
+                            <input class="modal-edit__input" type="number">
+                            <p>Rating:</p>
+                            <input class="modal-edit__input" type="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-edit__bottom">
+                    <button class="btn close-modal">Submit</button>
+                    <button class="btn close-modal">Cancel</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!--___Add modal___-->
+<div class="modal" data-modalName="add">
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Add more</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
+            <div class="add-modal">
+                <p>Add more</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--___Delete modal___-->
+
 <div class="modal" data-modalName="delete">
-    <div class="modal-content">
-        <span class="close-sign close-modal">&times;</span>
-        <p>Delate modal layout</p>
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Delete item</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
+            <div class="delete-modal">
+                <p>Are you sure that you want delete this item?</p>
+                <div>
+                    <button class="btn close-modal">Yes</button>
+                    <button class="btn close-modal">No</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
+<!--___Buy modal___-->
 <div class="modal" data-modalName="buy">
-    <div class="modal-content">
-        <span class="close-sign close-modal">&times;</span>
-        <p>Buy modal layout</p>
+    <div class="modal__body">
+        <div class="modal__header">
+            <span class="modal__title">Buy</span>
+            <span class="modal__close-sign close-modal">&times;</span>
+        </div>
+        <div class="modal__content">
+            <div class="buy-modal">
+                <p>You successfully purchased this item</p>
+            </div>
+        </div>
     </div>
 </div>
 
