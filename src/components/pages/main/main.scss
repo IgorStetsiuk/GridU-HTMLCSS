@@ -234,22 +234,13 @@
         font-size: 20px;
       }
 
-      & > button {
-        padding: 10px 20px;
-        background-color: #28a3a5;
-        border-radius: 5px;
-        color: $color-white;
-
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          cursor: pointer;
-        }
-      }
     }
 
   }
+}
+
+.btn {
+  background: $color-light-green;
 }
 
 

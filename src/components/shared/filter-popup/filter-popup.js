@@ -10,12 +10,12 @@ trigger.addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
-document.body.addEventListener('click', (e) => {
-    const target = e.target;
-    if (target.nodeType = 1 && !target.classList.contains('filter-popup')) {
-        toggle();
-    }
-});
+// document.body.addEventListener('click', (e) => {
+//     const target = e.target;
+//     if (target.nodeType = 1 && !target.classList.contains('filter-popup')) {
+//         toggle();
+//     }
+// });
 
 function toggle() {
     popup.classList.toggle('open');

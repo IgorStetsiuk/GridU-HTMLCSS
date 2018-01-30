@@ -28,21 +28,21 @@
   & * {
     color: $color-black;
   }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    border-bottom: 2px solid #333;
+    margin: 15px 0;
+  }
 }
 
 .product-img {
   width: 80%;
-}
-
-.product-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-name {
-  border-bottom: 2px solid #333;
-  margin: 15px 0;
 }
 
 .buy-item {
@@ -54,17 +54,12 @@
 }
 
 .item-price {
-  color: brown;
+  color: $color-brown;
   font-size: 20px;
 }
 
 .btn {
-  padding: 10px 20px;
   margin-top: 20px;
-  background-color: #28a3a5;
-  border-radius: 5px;
-  color: $color-white;
-  cursor: pointer;
 }
 
 .btn:focus {
@@ -75,16 +70,66 @@
   cursor: pointer;
 }
 
-nav.product-tools  {
+nav.product-tools {
 
- & a {
+  & a {
     color: $color-light-green;
     cursor: pointer;
 
   }
 }
 
+/* Styles for add modal*/
+.add-modal {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Styles for edit modal*/
+
+.modal-edit {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  &__top {
+    display: flex;
+  }
+
+  &__left, &__right {
+    padding: 5px;
+    flex: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  &__bottom {
+    align-self: center;
+  }
+}
+
+/* Styles for delete modal*/
+.delete-modal{
+  width: 400px;
+  height: 100px;
+  > div {
+    text-align: center;
+  }
+}
+.buy-modal{
+  @extend .delete-modal;
+}
 
 @media only screen and (max-width: 900px) {
   .product {
