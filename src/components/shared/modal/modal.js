@@ -18,10 +18,6 @@ const modalTriggers = document.getElementsByClassName('open-modal');
 
 let isModalOpen = false;
 
-// const modalClassesList = ['modal','close-modal','active','modal active','open-modal'];
-
-
-
 (function () {
     if(modalContents.length && modalTriggers.length) {
         enableModal();
@@ -32,12 +28,9 @@ function enableModal() {
     document.body.onclick = function (e) {
         const target = e.target;
 
-        // // check if target concerns modal window, else don`t execute this handler
-        // if(!modalClassesList.includes(target.className)) return;
-
         const activeModal = document.querySelector('.modal.active');
 
-        if (target.nodeType = 'BUTTON' && target.classList.contains('open-modal')) {
+        if (target.nodeType = 'BUTTON' && target.classList.contains('open-modal ')) {
             open(target);
             return
         }

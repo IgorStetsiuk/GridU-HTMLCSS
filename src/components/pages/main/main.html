@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
-    <link rel="stylesheet" href="../../compile/main/main.css">
+    <title>Main page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../compile/pages/main/main.css">
+
 
 </head>
 <body>
@@ -24,6 +26,65 @@
 
 <section>
     <div class="container">
+        <div class="tools">
+            <div class="tools__filter">
+                <div class="filter">
+                    <button id="filter-btn">Filter options</button>
+                    <!--Filter popup-->
+                    <div id="filter-popup" class="filter-popup">
+                        <div class="filter-popup__content">
+                            <div class="filter-popup__content_top">
+                                <div class="available">
+                                    <p>Availability:</p>
+                                    <label class="switch">
+                                        <input class="checkbox" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="gender">
+                                    <p>Gender:</p>
+                                    <div class="radio-button">
+                                        <label>
+                                            <input type="radio" name="gender">
+                                            Male
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="gender">
+                                            Female
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="gender">
+                                            Unisex
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="category">
+                                    <p>Category:</p>
+                                    <select class="select-option">
+                                        <option value="Clothes">Clothes</option>
+                                        <option value="Phones">Phones</option>
+                                        <option value="Tablets">Tablets</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter-popup__content_bottom">
+                                <p>
+                                    <label for="amount">Price range:</label>
+                                    <input type="text" id="amount" readonly>
+                                </p>
+                                <div id="slider-range"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools__search">
+                <div class="search">
+                    <input class="search__input" type="text" placeholder="Filter by text...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
         <div class="content">
             <div class="product-list">
                 <div class="product">
@@ -144,6 +205,8 @@
         <p class="footer-title">Demo Shop</p>
     </div>
 </footer>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../shared/filter-popup/filter-popup.js"></script>
 </body>
 </html>
