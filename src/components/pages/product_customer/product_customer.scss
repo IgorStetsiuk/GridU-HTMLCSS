@@ -1,8 +1,8 @@
 @import "../../shared/header/header";
 @import "../../shared/footer/footer";
 @import "../../utils/miscs";
-
-
+@import "../../shared/slider/slider";
+@import "../../shared/zoom/zoom";
 /*   Styles for current product  */
 
 .header-info {
@@ -26,10 +26,10 @@
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 3px;
-}
 
-.product-img {
-  width: 80%;
+  &--slider {
+    padding: 20px;
+  }
 }
 
 .product-info {
@@ -71,15 +71,7 @@
   cursor: pointer;
 }
 
-.product-description  {
+.product-description {
   color: $color-black;
 }
 
-@media only screen and (max-width: 900px) {
-  .product {
-    flex-direction: column;
-  }
-  .product-img {
-    margin: 0 auto;
-  }
-}

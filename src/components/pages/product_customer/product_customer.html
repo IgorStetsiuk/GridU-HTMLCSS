@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>ProductCustomer page</title>
     <link rel="stylesheet" href="../../compile/pages/product_customer/product_customer.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -28,11 +30,41 @@
             </div>
             <div class="products-list">
                 <div class="product">
-                    <img class="product-img" src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png" alt="img">
+                    <div class="product--slider">
+                        <div id="slider" class="zoom-container">
+                            <div class="slides-container">
+                                <div class="slide">
+                                    <img class="product--img zoom" src="../../../images/1.jpg" alt="img_1">
+                                    <div class="slide--description">
+                                        <p>Slide 1 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur culpa harum magni! Architecto cumque doloribus</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img class="product--img zoom" src="../../../images/2.jpg" alt="img_2">
+                                    <div class="slide--description">
+                                        <p>Slide 2 Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing.</p></div>
+                                </div>
+                                <div class="slide">
+                                    <img class="product--img zoom" src="../../../images/3.jpg" alt="img_3">
+                                    <div class="slide--description">
+                                        <p>Slide 3 Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="control arrow-left"><img src="../../../images/arrow.svg" alt="arrow-left"></a>
+                            <a class="control arrow-right"><img src="../../../images/arrow.svg" alt="arrow-right"></a>
+
+                        </div>
+                    </div>
                     <div class="product-info">
                         <div class="product-description">
                             <h3 class="product-name">Name of product</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores non odit quod recusandae repellat sapiente ullam.</p>
+                           <div class="slide--description">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                   maiores non odit quod recusandae repellat sapiente ullam.</p>
+                           </div>
                         </div>
                         <div class="buy-item">
                             <p class="item-price">$Price</p>
@@ -48,4 +80,6 @@
     <span>Copyright Test site 2018</span>
 </footer>
 </body>
+<script src="../../shared/slider/slider.js"></script>
+<script src="../../shared/zoom/zoom.js"></script>
 </html>

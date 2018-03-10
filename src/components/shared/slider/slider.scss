@@ -1,0 +1,62 @@
+@import "../../utils/variables";
+
+#slider {
+  position: relative;
+
+  .slides-container {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .slide {
+      width: 525px;
+      display: none;
+      opacity: 0;
+
+      &--description {
+        position: absolute;
+        bottom: 40px;
+        padding: 0 30px;
+        text-align: center;
+        width: 100%;
+      }
+
+    }
+
+    .active {
+      display: block;
+      opacity: 1;
+      transition: opacity 2s linear;
+
+
+    }
+
+  }
+  .control {
+    position: absolute;
+    cursor: pointer;
+    width: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 7px;
+    z-index: 1000;
+
+  }
+
+  .arrow-right {
+    right: 0;
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .arrow-left {
+    left: 0;
+  }
+
+}
+
