@@ -2,6 +2,25 @@
 $container-width: 1200px;
 
 $color-white:#fff;
+$color-danger:#FF0000;
+
+
+// color for primary buttons group
+$color-green: #1B745F;
+$color-light-green: #2BBCC2;
+
+//color for button secondary group
+$color-gray: #777777;
+$color-light-gray: #B1B1B1;
+
+$color-bright-gray:#999999;
+
+$color-bright-green:#9CC3BC;
+
+
+
+
+
 $color-dark-green: #2d874c;
 $color-light-green: #39b56a;
 $color-pad: #D1D1D1;
@@ -18,3 +37,12 @@ $color-dark-gray:#E8E9E5;
 
 $font-size-main: 18px;
 $font-size-middle: 28px;
+
+// images names
+$img-login-password-active: 'password-active.svg';
+$img-login-password-inactive: 'password-inactive.svg';
+$img-login-password-invalid: 'password-invalid.svg';
+
+$img-login-login-active: 'login-active.svg';
+$img-login-login-inactive: 'login-inactive.svg';
+$img-login-login-invalid: 'login-invalid.svg';

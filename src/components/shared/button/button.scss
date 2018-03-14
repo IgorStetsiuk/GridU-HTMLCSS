@@ -1,0 +1,53 @@
+@import "../../utils/variables";
+
+@mixin button-bg-color($first-color, $second-color) {
+
+  background: linear-gradient(180deg,  $first-color  0%,  $second-color  100%);
+
+  &:active {
+    background: linear-gradient(0deg, $first-color 100%, $second-color 0%);
+  }
+
+  &:disabled {
+    background: linear-gradient(180deg, $first-color 0%, $second-color 100%);
+  }
+}
+
+@mixin create-button( $isButtonSecondary:false, $isButtonBig: false) {
+  @if $isButtonBig {
+    padding: 15px 25px;
+    font-size: 24px;
+  } @else {
+    padding: 8px 42px;
+    font-size: 14px;
+  }
+
+  @if $isButtonSecondary {
+    @include button-bg-color($color-light-gray, $color-gray);
+  } @else {
+    @include button-bg-color($color-light-green, $color-green);
+  }
+
+  cursor: pointer;
+  color: $color-white;
+  border-radius: 5px;
+  outline: none;
+
+
+}
+
+.btn-primary-regular {
+  @include create-button();
+}
+
+.btn-primary-big {
+  @include create-button(false, true);
+}
+
+.btn-secondary-regular {
+  @include create-button(true);
+}
+
+.btn-secondary-big {
+  @include create-button(true, true);
+}

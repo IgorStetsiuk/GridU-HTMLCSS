@@ -1,13 +1,13 @@
 /*    Styles for Main layout   */
 
 @import "../../utils/variables";
-@import "../../utils/miscs";
+@import "../../utils/adjustment";
 @import "../header/header";
 @import "../footer/footer";
 
+
 //TODO: change background to the pattern img
 section {
-  background: #c5c5c5;
   flex: 1 0 auto;
 
   & .content {

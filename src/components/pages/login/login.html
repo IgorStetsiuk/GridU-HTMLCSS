@@ -8,27 +8,34 @@
 <body>
 
 <section>
-    <button class="open-modal" data-modalName="login">Login</button>
-</section>
+    <button class="open-modal btn-primary-regular" data-modalName="login">Login</button>
 
-<div class="modal" data-modalName="login">
-    <div class="modal__body">
-        <div class="modal__header">
-            <span class="modal__title">Login to Demo Shop</span>
-            <span class="modal__close-sign close-modal">&times;</span>
-        </div>
-        <div class="modal__content">
-            <div class="login__form">
-                <form class="form">
-                    <input class="form__input" type="text" minlength="4" maxlength="12" placeholder="Login" required>
-                    <input class="form__input" type="password" minlength="4" maxlength="12" placeholder="Password"
-                           required>
-                    <button class="close-modal btn">Submit</button>
-                </form>
+    <!--_________ Modal __________-->
+    <div class="modal" data-modalName="login">
+        <div class="modal__body">
+            <div class="modal__header">
+                <span class="modal__title">Login to "Demo Shop"</span>
+            </div>
+            <div class="modal__content">
+                <!--_________ Login form __________-->
+                <div class="login-form">
+                    <form>
+                        <label>Your login:</label>
+                        <input type="text" minlength="4" maxlength="12" placeholder="Login"
+                               >
+                        <span></span>
+                        <label for="password"> Your password:</label>
+                        <input id="password" type="password" minlength="4" maxlength="12"
+                               placeholder="Password" >
+                        <button class="close-modal btn-primary-regular">Submit</button>
+                        <span></span>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 </body>
 <script src="../../shared/modal/modal.js"></script>
 </html>

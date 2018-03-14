@@ -1,72 +1,60 @@
 @import "../../utils/variables";
-@import "../../utils/miscs";
+@import "../../utils/adjustment";
 @import "../../shared/modal/modal";
+@import "../../shared/button/button";
+@import "../../utils/mixins";
 
 section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../../../../assets/decor/bg.jpg");
 
-  & > button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #28a3a5;
-    border-radius: 5px;
-    color: $color-white;
-
-  }
-}
-.login {
-  display: flex;
-  flex-direction: column;
-  min-width: 500px;
-
-  background: $color-light-gray;
-
-  &__title {
-    text-align: center;
-    background-color: $color-white;
-    padding: 10px 0;
-  }
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  width: 400px;
-
-  &__input {
-    padding: 15px 10px;
-    border-radius: 5px;
-    margin: 5px;
-
-    &:focus {
-      outline: none;
+  .modal {
+    &__body {
+      max-width: 570px;
+      width: 80%;
     }
+  }
 
-    &:invalid {
-      border: 2px solid $color-error;
+  .login-form {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+
+    form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      label {
+        margin-top: 20px;
+      }
+
+      input {
+        font-size: 22px;
+        padding: 15px 20px;
+        width: 100%;
+        border-radius: 10px;
+        outline: none;
+        @include font-family-PTSans-regular();
+
+        @include input-states($img-login-password-active, $img-login-password-inactive, $img-login-password-invalid);
+      }
+
+      input:nth-of-type(1) {
+        @include input-states($img-login-login-active, $img-login-login-inactive, $img-login-login-invalid);
+      }
+
+      button {
+        margin-top: 20px;
+        align-self: flex-end;
+        width: 150px;
+        height: 50px;
+
+      }
     }
-
-    &:valid {
-      border: 2px solid #333;
-    }
-
-  }
-
-}
-
-.btn {
-  align-self: flex-end;
-  margin-top: 20px;
-}
-
-@media only screen and (max-width: 1000px) {
-  .form-input {
-    width: 70%;
-  }
-  .modal-content {
-    width: 80%;
   }
 }
+

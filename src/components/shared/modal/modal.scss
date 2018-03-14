@@ -20,17 +20,19 @@
   &__body {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   }
 
   &__header {
-    height: 40px;
+    height: 70px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background: $color-white;
     border-radius: 15px 15px 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
 
   }
   &__close-sign {
@@ -49,10 +51,8 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    background: $color-dark-gray;
-    border-radius: 0 0 15px 15px;
+   background: url("../../../../assets/decor/modal-bg.png");
+    border-radius:0 0 15px 15px;
   }
 
 }

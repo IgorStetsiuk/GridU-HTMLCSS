@@ -1,0 +1,42 @@
+@import "./fonts";
+@import "./variables";
+
+@mixin font-family-PTSans-regular() {
+  font-family: "PT Sans Reqular", serif;
+
+}
+
+@mixin font-family-PTSans-bold() {
+  font-family: "PT Sans Bold", serif;
+}
+
+@mixin get-background($imgUrl) {
+  background: $color-white url("../../../../assets/images/login-form/#{$imgUrl}") no-repeat 95% 50%;
+  background-size: 40px;
+
+}
+
+@mixin input-states($active,$inactive,$invalid) {
+  @include get-background($inactive);
+
+  &:focus:invalid, &:focus:invalid {
+    border: 2px solid $color-danger;
+    @include get-background($invalid);
+
+  }
+  &:invalid {
+    border: 2px solid $color-white;
+    @include get-background($invalid);
+  }
+
+  &:focus:valid {
+    border: 2px solid $color-bright-green;
+    @include get-background($active)
+  }
+
+  &::placeholder {
+    color: $color-bright-gray;
+    font-style: italic;
+  }
+
+}
