@@ -1,8 +1,8 @@
 @import "../../utils/variables";
 
 header {
-  border-bottom: 3px solid $color-light-green;
-  background: $color-dark-green;
+  box-shadow: 0 3px 0 0 rgba(92, 186, 150, 0.5);
+  background: $color-primary-main;
 
   .header-wrap {
     display: flex;
@@ -10,7 +10,15 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 10px 0;
+  }
 
+  .user {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 20px;
+    }
   }
 
 }

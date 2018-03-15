@@ -1,4 +1,4 @@
-@import "../../utils/variables";
+@import "variables";
 
 @mixin button-bg-color($first-color, $second-color) {
 
@@ -34,20 +34,4 @@
   outline: none;
 
 
-}
-
-.btn-primary-regular {
-  @include create-button();
-}
-
-.btn-primary-big {
-  @include create-button(false, true);
-}
-
-.btn-secondary-regular {
-  @include create-button(true);
-}
-
-.btn-secondary-big {
-  @include create-button(true, true);
 }

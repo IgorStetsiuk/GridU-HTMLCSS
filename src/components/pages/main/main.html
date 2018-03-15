@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <title>Main page</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../../compile/pages/main/main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../compile/pages/main/main.css">
-
-
 </head>
 <body>
 
@@ -18,14 +15,14 @@
         <div class="header-wrap">
             <div class="logo"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></div>
             <div class="user">
-                <span>User name</span>
-                <i><i class="fa fa-user " aria-hidden="true"></i></i>
+                <span>Hello, John Doe</span>
+                <img src="../../../assets/icons/header-logout.svg" alt="logout">
             </div>
         </div>
     </div>
 </header>
 
-<section>
+<section id="main">
     <div class="container">
         <div class="tools">
             <div class="tools__filter">
@@ -87,113 +84,203 @@
             </div>
         </div>
         <div class="content">
-            <div class="product-list">
+            <div class="products-list">
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=628" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                          <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=604" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=21" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>78800.00</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=64" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=6" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=177" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=325" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=389" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>47,95</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <h3 class="product__name">Name of product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                        non odit quod recusandae repellat sapiente ullam.</p>
-                    <div class="product__buy">
-                        <span>$Price</span>
-                        <button  class="btn">Show more</button>
+                    <div class="product--picture">
+                        <img src="https://picsum.photos/360/240/?image=453" alt="img">
+                        <ul class="product--rating">
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                            <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product--purchase">
+                        <h3 class="product--name">Name of product</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
+                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--price">
+                            <span class="product--cost"><span>$</span>100.54</span>
+                            <button class="btn-primary-regular">Show more</button>
+                        </div>
                     </div>
                 </div>
             </div>

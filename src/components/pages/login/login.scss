@@ -1,16 +1,19 @@
 @import "../../utils/variables";
-@import "../../utils/adjustment";
+@import "../../utils/index";
 @import "../../shared/modal/modal";
-@import "../../shared/button/button";
+@import "../../utils/button";
 @import "../../utils/mixins";
 
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../../../assets/decor/bg.jpg");
+
 
   .modal {
+    &__title {
+      @include font-family-PTSans-bold();
+    }
     &__body {
       max-width: 570px;
       width: 80%;

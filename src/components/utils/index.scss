@@ -1,0 +1,60 @@
+@import "./variables";
+@import "./mixins";
+@import "./button";
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: $font-size-main;
+  color: $color-text-white;
+  @include font-family-PTSans-regular();
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+section {
+  flex: 1 0 auto;
+  background-image: url("../../../../assets/decor/bg.jpg");
+
+  .container {
+    @extend .container;
+    padding: 80px 30px;
+    background-color: rgba(0,0,0,0.35);
+  }
+}
+
+
+
+.btn-primary-regular {
+  @include create-button();
+}
+
+.btn-primary-big {
+  @include create-button(false, true);
+}
+
+.btn-secondary-regular {
+  @include create-button(true);
+}
+
+.btn-secondary-big {
+  @include create-button(true, true);
+}
+
