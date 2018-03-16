@@ -1,4 +1,6 @@
 @import "../../utils/variables";
+@import "../../utils/mixins";
+
 
 .zoom-container {
   position: relative;
@@ -12,6 +14,10 @@
   top: 0;
   left: 102%;
 
+  @include respond-to($tablet-portrait) {
+    top: 102%;
+    left: 0;
+  }
 }
 
 #lens {

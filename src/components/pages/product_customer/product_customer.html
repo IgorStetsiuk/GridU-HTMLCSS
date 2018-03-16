@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="../../compile/pages/product_customer/product_customer.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
 </head>
 <body>
 <header>
@@ -15,63 +13,72 @@
         <div class="header-wrap">
             <div class="logo"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></div>
             <div class="user">
-                <span>User name</span>
-                <i><i class="fa fa-user " aria-hidden="true"></i></i>
+                <span>Hello, John Doe</span>
+                <img src="../../../assets/icons/header-logout.svg" alt="logout">
             </div>
         </div>
     </div>
 </header>
-<section>
+<section class="product-customer">
     <div class="container">
         <div class="content">
-            <div class="header-info">
-                <p>Back</p>
-                <p>Category: <b>Phone</b></p>
-            </div>
-            <div class="products-list">
-                <div class="product">
-                    <div class="product--slider">
-                        <div id="slider" class="zoom-container">
-                            <div class="slides-container">
-                                <div class="slide">
-                                    <img class="product--img zoom" src="../../../assets/images/1.jpg" alt="img_1">
-                                    <div class="slide--description">
-                                        <p>Slide 1 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur culpa harum magni! Architecto cumque doloribus</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <img class="product--img zoom" src="../../../assets/images/2.jpg" alt="img_2">
-                                    <div class="slide--description">
-                                        <p>Slide 2 Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing.</p></div>
-                                </div>
-                                <div class="slide">
-                                    <img class="product--img zoom" src="../../../assets/images/3.jpg" alt="img_3">
-                                    <div class="slide--description">
-                                        <p>Slide 3 Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="control arrow-left"><img src="../../../assets/images/arrow.svg" alt="arrow-left"></a>
-                            <a class="control arrow-right"><img src="../../../assets/images/arrow.svg" alt="arrow-right"></a>
+            <nav class="top-nav">
+                <a href="../product_customer/product_customer.html">Back</a>
+                <div>Category: <span>Man/Active wear</span></div>
+            </nav>
+            <div class="product-customer--product">
+               <div class="product">
+                   <div class="product--slider">
+                       <div id="slider" class="zoom-container">
+                           <div class="slides-container">
+                               <div class="slide">
+                                   <img class="product--img zoom" src="../../../assets/images/1.jpg" alt="img_1">
+                                   <div class="slide--description">
+                                       <p>Slide 1 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur culpa harum magni! Architecto cumque doloribus</span>
+                                       </p>
+                                   </div>
+                               </div>
+                               <div class="slide">
+                                   <img class="product--img zoom" src="../../../assets/images/2.jpg" alt="img_2">
+                                   <div class="slide--description">
+                                       <p>Slide 2 Lorem ipsum dolor sit amet, consectetur
+                                           adipisicing.</p></div>
+                               </div>
+                               <div class="slide">
+                                   <img class="product--img zoom" src="../../../assets/images/3.jpg" alt="img_3">
+                                   <div class="slide--description">
+                                       <p>Slide 3 Lorem ipsum dolor sit amet.</p>
+                                   </div>
+                               </div>
+                           </div>
+                           <a class="control arrow-left"><img src="../../../assets/images/arrow.svg" alt="arrow-left"></a>
+                           <a class="control arrow-right"><img src="../../../assets/images/arrow.svg"
+                                                               alt="arrow-right"></a>
 
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-description">
-                            <h3 class="product-name">Name of product</h3>
+                       </div>
+                       <ul class="product--rating rating">
+                           <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                           <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                           <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                           <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                           <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                       </ul>
+                   </div>
+                   <div id="zoom-result-boundaries" class="product--general">
+                       <div class="product-description">
+                           <h3 class="product--title">Active Coat Lorem Ipsum Dolor Sit Amet Consectetur
+                               Adipisicing Elit.3</h3>
                            <div class="slide--description">
                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
                                    maiores non odit quod recusandae repellat sapiente ullam.</p>
                            </div>
-                        </div>
-                        <div class="buy-item">
-                            <p class="item-price">$Price</p>
-                            <button class="btn">Buy</button>
-                        </div>
-                    </div>
-                </div>
+                       </div>
+                       <div class="product--purchase">
+                           <span class="cost"><span>$</span>47,95</span>
+                           <button class="btn-primary-regular">Buy</button>
+                       </div>
+                   </div>
+               </div>
             </div>
         </div>
     </div>

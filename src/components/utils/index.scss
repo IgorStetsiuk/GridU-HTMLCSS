@@ -1,6 +1,18 @@
 @import "./variables";
 @import "./mixins";
 @import "./button";
+@import "../../components/shared/footer/footer";
+@import "../../components/shared/header/header";
+
+@font-face {
+  font-family: "PT Sans Reqular";
+  src: url("../../../../assets/fonts/PT_Sans-Web-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../../../../assets/fonts/PT_Sans-Web-Bold.ttf");
+}
 
 html, body {
   display: flex;
@@ -30,17 +42,52 @@ html, body {
 }
 
 section {
+  display: flex;
   flex: 1 0 auto;
   background-image: url("../../../../assets/decor/bg.jpg");
 
   .container {
     @extend .container;
-    padding: 80px 30px;
-    background-color: rgba(0,0,0,0.35);
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.35);
   }
 }
 
+a {
+  text-decoration: none;
+  color: $color-white;
+}
 
+.cost {
+  font-size: 24px;
+  @include font-family-PTSans-bold();
+
+  span {
+    color: $color-green;
+  }
+}
+.rating {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  justify-content: flex-start;
+  list-style: none;
+
+  li {
+    margin: 3px;
+    width: 17px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
 
 .btn-primary-regular {
   @include create-button();
