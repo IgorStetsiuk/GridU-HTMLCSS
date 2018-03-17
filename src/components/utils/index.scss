@@ -56,6 +56,7 @@ section {
 a {
   text-decoration: none;
   color: $color-white;
+  cursor: pointer;
 }
 
 .cost {
@@ -66,6 +67,7 @@ a {
     color: $color-green;
   }
 }
+
 .rating {
   position: absolute;
   bottom: 0;
@@ -87,6 +89,13 @@ a {
     }
   }
 
+}
+
+ul {
+  list-style: none;
+  li {
+    display: inline;
+  }
 }
 
 .btn-primary-regular {
