@@ -15,6 +15,35 @@
 
 }
 
+@mixin select($arrow-down-img, $bgColor, $textColor:$color-white){
+  height: 35px;
+  width: 222px;
+  padding: 0 17px;
+  border-radius: 5px;
+  appearance: none;
+  background: $bgColor url("../../../../assets/icons/#{$arrow-down-img}") right center no-repeat;
+  color: $textColor;
+  outline: none;
+}
+
+@mixin text-input {
+
+  padding: 10px 50px 10px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  outline: none;
+
+  &::placeholder {
+    font-style: italic;
+    color: $color-bright-gray;
+  }
+
+  &:focus {
+    border: 2px solid $color-bright-green;
+  }
+}
+
 @mixin input-states($active,$inactive,$invalid) {
   @include get-background($inactive);
 

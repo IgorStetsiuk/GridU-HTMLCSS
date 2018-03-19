@@ -1,12 +1,16 @@
 $container-width: 1200px;
 
+$font-size-main: 14px;
+$font-size-middle: 28px;
+
 $color-white: #fff;
 $color-black: #000;
 $color-error: #FF0000;
+$color-yellow: #EFC211;
+$color-mixed-green: #288575;
 $color-bright-gray: #999999;
 $color-bright-green: #9CC3BC;
 $color-primary-main: linear-gradient(180deg, #449587 0%, #2A8676 100%);
-
 
 // color for primary buttons group
 $color-green: #1B745F;
@@ -16,28 +20,16 @@ $color-light-green: #2BBCC2;
 $color-gray: #777777;
 $color-light-gray: #B1B1B1;
 
+/*--modal background color--*/
+$color-dark-gray: #E8E9E5;
 
 // break points
-$phone:'(max-width: 480px)';
+$phone: '(max-width: 480px)';
 $tablet-portrait: '(max-width: 800px)';
 $large-desktop: '(max-width: 1000px)';
 
-$color-dark-green: #2d874c;
-$color-light-green: #2BBCC2;
-$color-pad: #D1D1D1;
-
-$color-error: #ff5954;
-$color-text-white: #fff;
-$color-brown: #A52A2A;
 
 
-$color-yellow: #EFC211;
-
-/*--modal background--*/
-$color-dark-gray: #E8E9E5;
-
-$font-size-main: 14px;
-$font-size-middle: 28px;
 
 // images names
 $img-login-password-active: 'password-active.svg';
@@ -47,3 +39,14 @@ $img-login-password-invalid: 'password-invalid.svg';
 $img-login-login-active: 'login-active.svg';
 $img-login-login-inactive: 'login-inactive.svg';
 $img-login-login-invalid: 'login-invalid.svg';
+
+//other ----
+$color-dark-green: #2d874c;
+$color-light-green: #2BBCC2;
+$color-pad: #D1D1D1;
+
+$color-error: #ff5954;
+$color-text-white: #fff;
+$color-brown: #A52A2A;
+
+

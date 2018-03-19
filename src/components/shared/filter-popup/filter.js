@@ -4,23 +4,15 @@ const popup = document.getElementById('filter-popup');
 
 let isPopupOpen = false;
 
-
 trigger.addEventListener('click', (e) => {
     toggle();
     e.stopPropagation();
 });
 
-// document.body.addEventListener('click', (e) => {
-//     const target = e.target;
-//     if (target.nodeType = 1 && !target.classList.contains('filter-popup')) {
-//         toggle();
-//     }
-// });
 
 function toggle() {
     popup.classList.toggle('open');
     isPopupOpen = !isPopupOpen;
-
 }
 
 // Range slider (according to task)

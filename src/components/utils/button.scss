@@ -15,10 +15,10 @@
 
 @mixin create-button( $isButtonSecondary:false, $isButtonBig: false) {
   @if $isButtonBig {
-    padding: 15px 25px;
+    padding: 8px 30px;
     font-size: 24px;
   } @else {
-    padding: 8px 42px;
+    padding: 8px 25px;
     font-size: 14px;
   }
 

@@ -140,3 +140,13 @@ b, i {
   @include create-button(true, true);
 }
 
+.text-input {
+  @include  text-input();
+}
+
+.select-green {
+  @include select('down-salect-white.svg',$color-mixed-green);
+}
+.select-white {
+  @include select('down-salect-green.svg',$color-white,$color-black)
+}

@@ -12,6 +12,9 @@ header {
     padding: 10px 0;
   }
 
+  .logo i {
+    color: $color-white;
+  }
   .user {
     display: flex;
     align-items: center;

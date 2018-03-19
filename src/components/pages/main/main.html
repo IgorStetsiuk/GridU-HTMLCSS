@@ -24,62 +24,67 @@
 
 <section id="main">
     <div class="container">
-        <div class="tools">
-            <div class="tools__filter">
-                <div class="filter">
-                    <button id="filter-btn">Filter options</button>
-                    <!--Filter popup-->
-                    <div id="filter-popup" class="filter-popup">
-                        <div class="filter-popup__content">
-                            <div class="filter-popup__content_top">
-                                <div class="available">
-                                    <p>Availability:</p>
-                                    <label class="switch">
-                                        <input class="checkbox" type="checkbox">
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-                                <div class="gender">
-                                    <p>Gender:</p>
-                                    <div class="radio-button">
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Male
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Female
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="gender">
-                                            Unisex
+        <div class="tool-bar">
+            <div class="tool-bar--tools-btn">
+                <div class="tool-bar--filter">
+                    <div class="filter">
+                        <button id="filter-btn" class="btn-primary-regular">Filter options</button>
+                        <!--Filter popup-->
+                        <div id="filter-popup" class="filter-popup">
+                            <div class="filter-popup--content">
+                                <div class="filter-popup--top">
+                                    <div class="available">
+                                        <p>Availability:</p>
+                                        <label class="switch">
+                                            <input class="checkbox" type="checkbox">
+                                            <span class="slider round"></span>
                                         </label>
                                     </div>
+                                    <div class="gender">
+                                        <p>Gender:</p>
+                                        <div class="radio-btn-group">
+                                            <label class="radio-container">
+                                                <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                                Male
+                                            </label>
+                                            <label class="radio-container">
+                                                <input type="radio" name="gender">
+                                                Female
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                                Unisex
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="category">
+                                        <p>Category:</p>
+                                        <select class="select-green">
+                                            <option value="Clothes">Clothes</option>
+                                            <option value="Phones">Phones</option>
+                                            <option value="Tablets">Tablets</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="category">
-                                    <p>Category:</p>
-                                    <select class="select-option">
-                                        <option value="Clothes">Clothes</option>
-                                        <option value="Phones">Phones</option>
-                                        <option value="Tablets">Tablets</option>
-                                    </select>
+                                <div class="filter-popup--bottom">
+                                    <div>
+                                        <label for="amount">Price range:</label>
+                                        <input type="text" id="amount" readonly>
+                                    </div>
+                                    <div id="slider-range"></div>
                                 </div>
-                            </div>
-                            <div class="filter-popup__content_bottom">
-                                <p>
-                                    <label for="amount">Price range:</label>
-                                    <input type="text" id="amount" readonly>
-                                </p>
-                                <div id="slider-range"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tools__search">
-                <div class="search">
-                    <input class="search__input" type="text" placeholder="Filter by text...">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="tool-bar--search">
+                    <div class="search">
+                        <input class="text-input" type="text" placeholder="Filter by text...">
+                        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,6 +300,6 @@
 </footer>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="../../shared/filter-popup/filter-popup.js"></script>
+<script src="../../shared/filter-popup/filter.js"></script>
 </body>
 </html>

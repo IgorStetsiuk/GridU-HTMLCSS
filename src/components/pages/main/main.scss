@@ -10,16 +10,15 @@
   }
   .products-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .product {
     height: 460px;
     color: $color-black;
-    margin: 10px;
+    margin-bottom: 30px;
     flex-basis: 360px;
-
 
     &--picture {
       min-width: 0;
@@ -91,13 +90,25 @@
 
 /*  Filter popup  styles */
 
-.tools {
+.tool-bar {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 25px;
 
-  .filter {
+  @include respond-to($tablet-portrait) {
+    justify-content: flex-start;
+  }
+
+  &--tools-btn {
+    display: flex;
+    flex-basis: 350px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  &--filter {
 
     > button {
       padding: 10px 20px;
@@ -115,15 +126,17 @@
     }
   }
 
-  .search {
+  &--search {
+    position: relative;
+    span {
+      position: absolute;
+      top: 25%;
+      right: 10px;
+      opacity: 0.3;
 
-    &__input {
-      padding: 10px 10px;
-      border-radius: 5px;
-      margin: 5px;
-
-      &:focus {
-        outline: none;
+      i {
+        font-size: 20px;
+        color: $color-black;
       }
     }
   }
@@ -133,182 +146,250 @@
   display: none;
   position: absolute;
   background-color: $color-white;
-  padding: 30px 20px;
+  padding: 20px;
   margin-top: 10px;
-  width: 600px;
+  width: 65%;
   top: 100%;
-  right: 30px;
-  border-radius: 5px;
+  right: 0;
+  border-radius: 15px;
   color: $color-black;
+  z-index: 100;
 
-  &__content_top {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #28a3a5;
-    padding-bottom: 20px;
+  @include respond-to($large-desktop) {
+    width: 100%;
   }
 
-  &__content_bottom {
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &--top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid $color-mixed-green;
+    flex-wrap: wrap;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    @include respond-to($tablet-portrait) {
+
+      & > div:not(:last-child) {
+        border-bottom: 0.5px solid $color-mixed-green;
+        padding-bottom: 12px;
+
+      }
+      & > div:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      flex-direction: column;
+    }
+
+    .radio-btn-group {
+      display: flex;
+      margin-top: 13px;
+
+      .radio-container {
+        display: block;
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+        margin-right: 10px;
+
+        &:focus {
+          color: #2A8676;
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+
+        }
+
+      }
+
+      .checkmark {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: $color-white;
+        border-radius: 50%;
+        border: 1px solid #288575;
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .radio-container input:checked ~ .checkmark:after {
+        display: block;
+
+      }
+
+      .radio-container .checkmark:after {
+        top: 1px;
+        left: 1px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #288575;
+
+      }
+
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 27px;
+      border: 1px solid #288575;
+      border-radius: 25px;
+
+
+      input {
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-mixed-green;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 20px;
+          left: 4px;
+          bottom: 3px;
+          background-color: $color-mixed-green;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+      }
+
+      input[type="checkbox"] {
+
+        &:checked + .slider {
+          background-color: $color-white;
+
+        }
+        &:not(:checked) + .slider {
+          background-color: $color-mixed-green;
+          &:before{
+            background: $color-white;
+          }
+      }
+
+        &:focus .slider {
+          box-shadow: 0 0 1px $color-mixed-green;
+        }
+      }
+
+      .checkbox:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      .slider.round {
+        border-radius: 25px;
+
+        &:before {
+          border-radius: 50%;
+        }
+
+      }
+    }
+
+  }
+
+  &--bottom {
     padding-top: 15px;
+
+    @include respond-to($tablet-portrait) {
+      margin: 20px 0 20px;
+    }
+
+    input {
+      border: 0;
+      color: $color-yellow;
+      font-weight: bold;
+    }
+
+    #slider-range {
+      margin-top: 15px;
+
+      & > div {
+        background: $color-mixed-green;
+
+      }
+
+      & > span {
+        width: 20px;
+        height: 20px;
+        background: $color-mixed-green;
+        display: block;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+      }
+    }
+
   }
 
   &:after {
-    content: " ";
+    content: "";
     position: absolute;
     bottom: 100%;
-    left: 67%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
+    right: 275px;
+    margin-left: 6px;
+    border: 5px solid;
     border-color: transparent transparent #fff transparent;
+
+    @include respond-to($tablet-portrait) {
+      right: initial;
+      left: 50px;
+    }
   }
 
 }
 
 .open {
   display: block;
-
 }
 
-.available p, .gender p, .category p {
-  padding-bottom: 15px;
+.ui-widget.ui-widget-content {
+  border: none;
 }
 
-.radio-button {
-  display: flex;
-}
+.ui-slider-horizontal {
+  height: 2px;
+  background: $color-light-gray;
 
-.radio-button input {
-  background-color: #28a3a5;
-}
-
-.select-option {
-  padding: 10px;
-  background-color: #28a3a5;
-  width: 180px;
-  color: #fff;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 27px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-
-  &:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-}
-
-.checkbox:checked + .slider {
-  background-color: #28a3a5;
-}
-
-.checkbox:focus + .slider {
-  box-shadow: 0 0 1px #28a3a5;
-}
-
-.checkbox:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 20px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.filter-input {
-  padding: 10px 10px;
-  border-radius: 5px;
-  margin: 5px;
-
-  &:focus {
-    outline: none;
+  .ui-slider-handle {
+    top: -10px;
+    margin-left: -.6em;
   }
 }
-
-#amount {
-  border: 0;
-  color: #f6931f;
-  font-weight: bold;
-}
-
-#slider-range {
-  margin-top: 15px;
-}
-
-.footer-title {
-  text-align: center;
-}
-
-/* Product styles  */
-
-.product-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 20px 20px 0;
-
-}
-
-//@media only screen and (max-width: 1164px) {
-//
-//  .tools {
-//    justify-content: space-between;
-//  }
-//
-//  .products-list {
-//    justify-content: space-around;
-//  }
-//
-//  .filter-popup {
-//    width: calc(100% - 80px);
-//  }
-//
-//  .products-list {
-//    justify-content: space-around;
-//  }
-//
-//  .filter-popup:after {
-//    left: 8%;
-//  }
-//  .filter-popup__content_top {
-//    flex-direction: column;
-//    border-bottom: none;
-//  }
-//  .available, .gender, .category {
-//    border-bottom: 1px solid #28a3a5;
-//    padding: 15px;
-//  }
-//}
