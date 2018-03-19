@@ -87,10 +87,11 @@
   }
 
   .review {
+    display: none;
     margin-bottom: 100px;
 
     &--live-preview {
-      height: 155px;
+      position: relative;
       background-color: rgba(0, 0, 0, 0.7);
       display: flex;
       flex-direction: column;
@@ -98,11 +99,28 @@
       padding: 15px;
 
       .publication-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
 
         &--author-name {
           color: $color-yellow;
           font-style: italic;
         }
+        .rating-stars {
+          color: $color-black;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          list-style: none;
+          img {
+            margin-right: 3px;
+            width: 17px;
+          }
+        }
+
       }
 
       .post {
@@ -120,12 +138,30 @@
             max-width: 100%;
           }
         }
+
+        &--comment-wrap {
+          display: flex;
+          align-self: flex-start;
+          flex: 1 1 auto;
+        }
+
+        &--comment {
+          width: 100%;
+          font-size: 14px;
+          @include font-family-PTSans-regular();
+          span {
+            font-style: italic;
+            opacity: 0.5;
+          }
+        }
       }
+
     }
 
     &--bottom {
       color: $color-black;
       border: 3px solid #3FC5CB;
+      position: relative;
       padding: 25px;
       display: flex;
       background: url("../../../../assets/decor/modal-bg.png");
@@ -150,11 +186,21 @@
             width: 100%;
             border-radius: 5px;
             outline: none;
+            border: 2px solid transparent;
+
             @include font-family-PTSans-regular();
+            &:focus {
+              border: 2px solid $color-bright-green;
+            }
           }
         }
 
         .profile-avatar {
+          span {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
           & > label {
             font-size: 16px;
             margin-bottom: 10px;
@@ -175,17 +221,17 @@
             }
 
             label {
-              height: 76px;
-              width: 77px;
-              border: 3px solid #000000;
-              opacity: 0.2;
+              height: 80px;
+              width: 80px;
+              display: flex;
               border-radius: 15px;
+              border: 3px solid rgba(0, 0, 0, .2);
 
               img {
                 max-width: 100%;
                 display: block;
                 cursor: pointer;
-                border-radius: 15px;
+                border-radius: 9px;
               }
             }
 
@@ -205,12 +251,16 @@
           align-items: center;
           justify-content: space-between;
           margin-bottom: 10px;
+          font-size: 16px;
 
         }
 
         &--rate {
           display: flex;
           align-items: center;
+          span {
+            margin-right: 15px;
+          }
 
           .rating-stars {
             color: $color-black;
@@ -220,28 +270,80 @@
             justify-content: flex-start;
             list-style: none;
 
-            li {
-              margin: 3px;
+            img {
               width: 17px;
-
-              img {
-                max-width: 100%;
-              }
+              margin-right: 3px;
             }
           }
+
         }
 
         &--body {
+          margin-bottom: 3px;
           textarea {
             width: 100%;
             border-radius: 5px;
+            padding: 15px;
+            height: 190px;
+            resize: none;
+            font-size: 16px;
+            line-height: 20px;
+            outline: none;
+            border: 2px solid transparent;
+            @include font-family-PTSans-regular();
+
+            &:focus {
+              border: 2px solid $color-bright-green;
+            }
 
           }
+        }
+
+        &--footer {
+          display: flex;
+          justify-content: space-between;
+
+          & > div {
+            display: flex;
+          }
+          .edit-controls {
+            button {
+              padding: 8px;
+              margin-right: 10px;
+            }
+          }
+          .submit-controls {
+            button:first-child {
+              margin-right: 10px;
+            }
+          }
+
+        }
+
+      }
+
+      .edit-review {
+        top: -25px;
+        left: 50%;
+        margin-left: -90px;
+        position: absolute;
+        width: 180px;
+        padding: 12px 20px;
+        border: 3px solid #3FC5CB;
+        border-radius: 15px;
+        background: $color-white;
+        color: $color-black;
+        text-align: center;
+
+        span {
+          text-transform: uppercase;
+          @include font-family-PTSans-bold();
         }
       }
     }
 
   }
+
 }
 
 

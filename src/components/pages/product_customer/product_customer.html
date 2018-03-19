@@ -87,32 +87,46 @@
             </div>
             <div class="review">
                 <div class="review--live-preview">
-                    <p class="publication-info">
-                        By
-                        <span class="publication-info--author-name">Your Name</span>
-                        <span class="publication-info--date">March 4, 2017</span>
-                    </p>
+                    <div class="publication-info">
+                        <p class="publication--author">
+                            By
+                            <span id="name-preview" class="publication-info--author-name">Your Name</span>
+                            <span class="publication-info--date">March 4, 2017</span>
+                        </p>
+                        <div id="rating-preview" class="rating-stars ">
+                            <img src="../../../assets/decor/star-inactive.svg" alt="start-inactive">
+                            <img src="../../../assets/decor/star-inactive.svg" alt="start-inactive">
+                            <img src="../../../assets/decor/star-inactive.svg" alt="start-inactive">
+                            <img src="../../../assets/decor/star-inactive.svg" alt="start-inactive">
+                            <img src="../../../assets/decor/star-inactive.svg" alt="start-inactive">
+                        </div>
+                    </div>
+
                     <div class="post">
                         <div class="post--author-avatar">
-                            <img src="http://via.placeholder.com/80x80" alt="author-avatar">
+                            <img class="avatar-thumbnail" id="author-avatar-preview"
+                                 src="http://via.placeholder.com/80x80" alt="author-avatar">
                         </div>
-                        <div class="post--comment">Start typing and your review text will appear here..</div>
+                        <div class="post--comment-wrap">
+                            <pre id="review-preview" class="post--comment"><span>Start typing and your review text will appear here..</span></pre>
+                        </div>
                     </div>
                 </div>
                 <div class="review--bottom">
                     <div class="review-profile">
                         <div class="profile-name">
                             <label for="author-name">Enter your name</label>
-                            <input id="author-name" type="text">
+                            <input id="author-name" name="author-name" type="text">
                         </div>
                         <div class="profile-avatar">
-                            <label for="upload-image">Choose your avatar</label>
+                            <span>Choose your avatar</span>
                             <div class="profile-avatar--upload">
-                                <span>Image not selected</span>
-                                <label for="upload-image">
-                                    <img src="http://via.placeholder.com/80x80" alt="upload-img">
+                                <span class="upload-status">Image not selected</span>
+                                <label for="author-avatar">
+                                    <img class="avatar-thumbnail" src="http://via.placeholder.com/80x80"
+                                         alt="upload-img">
                                 </label>
-                                <input type="file" id="upload-image" accept="image/*">
+                                <input name="author-avatar" type="file" id="author-avatar" accept="image/*">
                             </div>
                         </div>
                     </div>
@@ -120,30 +134,40 @@
                         <div class="comment--header">
                             <span>Write your review</span>
                             <div class="comment--rate">
-                                <span>Rate product</span>
-                                <ul class="rating-stars ">
-                                    <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
-                                    <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
-                                    <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
-                                    <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
-                                    <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
-                                </ul>
+                                <span>Rate product:</span>
+                                <div id="rating" class="rating-stars">
+                                    <img src="../../../assets/decor/star-inactive.svg" data-state="inactive"
+                                         alt="start-inactive">
+                                    <img src="../../../assets/decor/star-inactive.svg" data-state="inactive"
+                                         alt="start-inactive">
+                                    <img src="../../../assets/decor/star-inactive.svg" data-state="inactive"
+                                         alt="start-inactive">
+                                    <img src="../../../assets/decor/star-inactive.svg" data-state="inactive"
+                                         alt="start-inactive">
+                                    <img src="../../../assets/decor/star-inactive.svg" data-state="inactive"
+                                         alt="start-inactive">
+                                </div>
                             </div>
                         </div>
                         <div class="comment--body">
-                            <textarea name="review" id="" cols="30" rows="10"></textarea>
+                            <textarea id="author-review" name="review" cols="30" rows="10"></textarea>
                         </div>
                         <div class="comment--footer">
-                            <div class="comment--edit-controls">
-                                <button id="bold-btn" class="btn-secondary-regular">Bold</button>
-                                <button id="emphasize-btn" class="btn-secondary-regular">Emphasize</button>
-                                <button id="quote-btn" class="btn-secondary-regular">Quote</button>
+                            <div class="edit-controls">
+                                <button id="bold-btn" data-edit="bold" class="btn-secondary-regular">Bold</button>
+                                <button id="emphasize-btn" data-edit="emphasize" class="btn-secondary-regular">
+                                    Emphasize
+                                </button>
+                                <button id="quote-btn" data-edit="quote" class="btn-secondary-regular">Quote</button>
                             </div>
-                            <div class="comment--submit-controls">
+                            <div class="submit-controls">
                                 <button id="cancel-btn" class="btn-secondary-regular">Cancel</button>
                                 <button id="submit-btn" class="btn-primary-regular">Submit</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="edit-review">
+                        <span> edit your review</span>
                     </div>
                 </div>
             </div>
@@ -156,5 +180,5 @@
 </body>
 <script src="../../shared/slider/slider.js"></script>
 <script src="../../shared/zoom/zoom.js"></script>
-<script src="../../shared/review/review.js"></script>
+<script src="review.js"></script>
 </html>

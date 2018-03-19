@@ -119,8 +119,6 @@ class Zoom {
 				this.resultView = null;
 				this.lens = null;
 			}
-
-
 	}
 
 	getCursorPos(e) {

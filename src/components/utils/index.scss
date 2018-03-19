@@ -98,6 +98,32 @@ ul {
   }
 }
 
+b, i {
+  color: $color-yellow;
+}
+
+.quote {
+  font-size: 34px;
+  font-style: italic;
+  position: relative;
+  margin: 10px;
+  opacity: 1;
+
+  &:before,&:after {
+    content: '';
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    margin-left: -15px;
+    background: url("../../../../assets/decor/quote.png") 0 0 no-repeat;
+  }
+
+  &:after {
+    bottom: 0;
+    margin-left: 5px;
+    transform: rotate(180deg);
+  }
+}
 .btn-primary-regular {
   @include create-button();
 }
