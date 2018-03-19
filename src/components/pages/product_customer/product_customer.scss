@@ -77,7 +77,6 @@
   }
 
   .leave-review {
-    width: 500px;
     margin: 0 auto 50px;
     text-align: center;
 
@@ -127,6 +126,16 @@
         display: flex;
         align-items: center;
 
+        @include respond-to($phone) {
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-bottom: 30px;
+
+          &--comment-wrap {
+            margin-top: 20px;
+          }
+        }
+
         &--author-avatar {
           width: 79px;
           height: 79px;
@@ -153,6 +162,9 @@
             font-style: italic;
             opacity: 0.5;
           }
+          span.quote {
+            opacity: 1;
+          }
         }
       }
 
@@ -164,11 +176,17 @@
       position: relative;
       padding: 25px;
       display: flex;
+      flex-wrap: wrap;
       background: url("../../../../assets/decor/modal-bg.png");
 
       .review-profile {
         padding-right: 20px;
-        width: 35%;
+        flex: 1 1 200px;
+
+        @include respond-to($tablet-portrait) {
+          padding-right: 0;
+          margin-bottom: 20px;
+        }
 
         .profile-name {
           display: flex;
@@ -244,7 +262,11 @@
       }
 
       .comment {
-        width: 65%;
+        flex: 1 0 450px;
+
+        @include respond-to($tablet-portrait){
+          flex: auto;
+        }
 
         &--header {
           display: flex;
@@ -303,6 +325,14 @@
           display: flex;
           justify-content: space-between;
 
+          @include respond-to('(max-width:600px)'){
+            justify-content: center;
+
+            div:first-child {
+              margin-bottom: 20px;
+            }
+          }
+
           & > div {
             display: flex;
           }
@@ -316,6 +346,10 @@
             button:first-child {
               margin-right: 10px;
             }
+          }
+
+          @include respond-to($tablet-portrait) {
+            flex-wrap: wrap;
           }
 
         }

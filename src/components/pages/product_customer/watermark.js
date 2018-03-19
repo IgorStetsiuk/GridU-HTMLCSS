@@ -31,7 +31,7 @@ class WatermarkImage {
 		canvas.width = image.width;
 		canvas.height = image.height;
 		canvas.style.display = "none";
-		canvas.style.cssText = "position: absolute; z-index: -1; bottom: 20; left: 0;";
+		canvas.style.cssText = "position: absolute; z-index: 100; bottom: 20; left: 0;";
 		canvas.getContext("2d").drawImage(image, 0, 0, image.width, image.height);
 		
 		return canvas.toDataURL('image/png');
@@ -53,7 +53,7 @@ class WatermarkImage {
 				elemImage.src = canvas.toDataURL('image/png');
 				
 			};
-			// SVG image watermark (HTML of text at bottom right)
+		
 			img.src = 'data:image/svg+xml;base64,' + window.btoa(
 				'<svg xmlns="http://www.w3.org/2000/svg" height="' + h + '" width="' + w + '">' +
 				'<foreignObject width="100%" height="100%">' +
@@ -74,7 +74,7 @@ class WatermarkImage {
 				'</foreignObject>' +
 				'</svg>'
 			);
-			// img.src = WatermarkImage.convertImageToCanvas(document.querySelector('#watermark img'));
+			// img.src = WatermarkImage.convertImageToCanvas(document.querySelector('.product--img'));
 		};
 		
 		testImage.src = elemImage.src;
@@ -84,7 +84,7 @@ class WatermarkImage {
 	}
 }
 
-new WatermarkImage().createImage(document.querySelector('.product--img'), 'Watermark');
+// new WatermarkImage().createImage(document.querySelector('.product--img'), 'Watermark');
 
 
 
