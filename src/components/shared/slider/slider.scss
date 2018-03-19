@@ -59,5 +59,16 @@
     left: 0;
   }
 
+  #watermark {
+    position: absolute;
+    width: 200px;
+    top: 10px;
+    right: 10px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
 }
 
