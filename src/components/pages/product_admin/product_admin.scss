@@ -4,81 +4,96 @@
 
 /*   Styles for product_admin page  */
 
-
-.product-admin{
-
-}
-.header-info {
+.product-wrap {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 20px 0;
-}
 
-.products-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 20px 20px 0;
-}
-
-.product {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  & * {
-    color: $color-black;
-  }
-
-  &__info {
+  nav {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid $color-white;
+    }
+    div {
+      font-size: 15px;
+      color: $color-white;
+
+      span {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+    }
   }
 
-  &__name {
-    border-bottom: 2px solid #333;
-    margin: 15px 0;
-  }
-}
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: url("../../../../assets/decor/modal-bg.png");
+    margin-bottom: 20px;
 
-.product-img {
-  width: 80%;
-}
+    &--picture {
+      position: relative;
+      flex-basis: 350px;
+      flex-grow: 1;
 
-.buy-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-}
+      div {
+        position: relative;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
 
-.item-price {
-  color: $color-brown;
-  font-size: 20px;
-}
+    }
 
-.btn {
-  margin-top: 20px;
-}
+    &--general {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $color-black;
+      flex-basis: 350px;
+      flex-grow: 1;
+      padding-left: 20px;
 
-.btn:focus {
-  outline: none;
-}
+      @include respond-to($tablet-portrait) {
+        margin-top: 20px;
+        padding-left: 0;
+      }
+    }
 
-.btn:hover {
-  cursor: pointer;
-}
+    &--title {
+      padding-bottom: 15px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid #3FC5CB;
+      font-size: 24px;
 
-nav.product-tools {
+    }
+    &--description {
+      font-size: 16px;
+      p {
+        margin-bottom: 20px;
 
-  & a {
-    color: $color-light-green;
-    cursor: pointer;
+        a {
+          color: $color-green;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--purchase {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid #D6D6D6;
+    }
 
   }
 }
@@ -97,52 +112,155 @@ nav.product-tools {
 .modal-edit {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 23px;
 
-  &__top {
+  .text-input {
+    padding: 10px;
+  }
+
+  &--top {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .top-left, .top-right {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 47%;
+
+      & > div {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="url"]:invalid {
+        border: 2px solid $color-error;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      img {
+        max-width: 100%;
+        border: 1px solid #D8D8D8;
+      }
+
+      textarea {
+        padding: 20px;
+        resize: none;
+        height: 200px;
+        line-height: 19px;
+        outline: none;
+
+        &:focus {
+          border: 2px solid $color-bright-green;
+        }
+        @include respond-to($tablet-portrait) {
+          height: 130px;
+        }
+      }
+
+      select {
+        width: 100%;
+      }
+
+      @include respond-to($tablet-portrait) {
+        flex-basis: 100%;
+      }
+
+    }
+
   }
 
-  &__left, &__right {
-    padding: 5px;
-    flex: 1;
-  }
+  &--bottom {
+    text-align: right;
 
+    @include respond-to($tablet-portrait) {
+      text-align: center;
+    }
+
+    button {
+      color: $color-white;
+
+      &:first-child {
+        margin-right: 48px;
+      }
+    }
+  }
+}
+
+.modal {
+  .edit-modal-body, .buy-modal, .delete-modal {
+    width: 100%;
+    max-width: 730px;
+
+    @include respond-to($tablet-portrait) {
+      margin: 0 auto;
+      padding: 0 30px;
+
+    }
+
+  }
+  @include respond-to($tablet-portrait) {
+    padding: 70px 0;
+  }
   &__content {
-    display: flex;
-    flex-direction: column;
+
+    .buy-modal {
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      height: 200px;
+
+      p {
+        margin-bottom: 30px;
+        @include respond-to($tablet-portrait) {
+          text-align: center;
+          margin-bottom: 19px;
+
+        }
+      }
+
+      button {
+        color: $color-white;
+        align-self: flex-end;
+      }
+
+    }
+  }
+}
+
+@include respond-to($tablet-portrait) {
+  div.modal.active {
+    display: initial;
   }
 
-  &__input {
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px 0;
+  div.modal.buy-active.active,
+  div.modal.delete-active.active {
+    display: flex;
   }
-  &__bottom {
-    align-self: center;
-  }
+
 }
 
 /* Styles for delete modal*/
-.delete-modal{
-  width: 400px;
-  height: 100px;
-  > div {
-    text-align: center;
+.delete-modal {
+  @extend .buy-modal;
+
+  &--controls {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button:first-child {
+      margin-right: 40px;
+    }
   }
-}
-.buy-modal{
-  @extend .delete-modal;
+
 }
 
-@media only screen and (max-width: 900px) {
-  .product {
-    flex-direction: column;
-  }
-  .product-img {
-    margin: 0 auto;
-  }
-  .product-tools {
-    padding: 15px 0;
-  }
-}
+

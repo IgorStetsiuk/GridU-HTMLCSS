@@ -199,66 +199,6 @@
       flex-direction: column;
     }
 
-    .radio-btn-group {
-      display: flex;
-      margin-top: 13px;
-
-      .radio-container {
-        display: block;
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 14px;
-        user-select: none;
-        margin-right: 10px;
-
-        &:focus {
-          color: #2A8676;
-        }
-
-        input {
-          position: absolute;
-          opacity: 0;
-          cursor: pointer;
-
-        }
-
-      }
-
-      .checkmark {
-        position: absolute;
-        top: -4px;
-        left: 0;
-        height: 24px;
-        width: 24px;
-        background-color: $color-white;
-        border-radius: 50%;
-        border: 1px solid #288575;
-      }
-
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      .radio-container input:checked ~ .checkmark:after {
-        display: block;
-
-      }
-
-      .radio-container .checkmark:after {
-        top: 1px;
-        left: 1px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #288575;
-
-      }
-
-    }
     .switch {
       position: relative;
       display: inline-block;

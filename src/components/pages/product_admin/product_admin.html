@@ -24,33 +24,51 @@
 <section id="product-admin">
     <div class="container">
         <div class="content">
-            <div class="header-info">
-                <p>Back</p>
-                <p>Category: <b>Phone</b></p>
-            </div>
-            <div class="products-list">
+            <nav class="top-nav">
+                <a href="../product_admin/product_admin.html">Back</a>
+                <div>Category: <span>Man/Active wear</span></div>
+            </nav>
+            <div class="product-wrap">
                 <div class="product">
-                    <img class="product__img"
-                         src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                         alt="img">
-                    <div class="product__info">
-                        <div class="product-description">
-                            <h3 class="product__name">Name of product</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
-                                maiores non odit quod recusandae repellat sapiente ullam.</p>
+                    <div class="product--picture">
+                        <div>
+                            <img class="product--img" src="../../../assets/images/1.jpg" alt="img_1">
+                            <ul class="product--rating rating">
+                                <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                                <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                                <li><img src="../../../assets/decor/star-active.svg" alt="start-active"></li>
+                                <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                                <li><img src="../../../assets/decor/star-inactive.svg" alt="start-inactive"></li>
+                            </ul>
                         </div>
-                        <nav class="product-tools">
-                            You can
-                            <a class="open-modal" data-modalName="add">add more.</a>
-                            You can also
-                            <a class="open-modal" data-modalName="edit">edit</a>
-                            details or
-                            <a class="open-modal" data-modalName="delete">delete</a>
-                            them.
-                        </nav>
-                        <div class="buy-item">
-                            <p class="item-price">$Price</p>
-                            <button class="open-modal btn" data-modalName="buy">Buy</button>
+
+                    </div>
+                    <div class="product--general">
+                        <div>
+                            <h3 class="product--title">Active Coat Lorem Ipsum Dolor Sit Amet Consectetur
+                                Adipisicing Elit.3</h3>
+                            <div class="product--description">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam, libero
+                                    aliquid architecto ad quis maiores sit nulla officiis ex velit sapiente autem fugit
+                                    quam, qui reprehenderit veniam fugiat nemo exercitationem cum minus ipsa
+                                    consequuntur. Pariatur totam suscipit, voluptatibus laudantium.
+
+                                </p>
+                                <p>
+                                    You can
+                                    <a>add more.</a>
+                                    You can also
+                                    <a class="open-modal" data-modalName="edit">edit</a>
+                                    details or
+                                    <a class="open-modal" data-modalName="delete">delete</a>
+                                    them.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product--purchase">
+                            <span class="cost"><span>$</span>47,95</span>
+                            <button data-modalName="buy" class="open-modal btn btn-primary-regular">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -61,94 +79,98 @@
 
 <!--------------------------Modals-------------------------->
 <!--___Edit modal___-->
-<div class="modal" data-modalName="edit">
-    <div class="modal__body">
+<div class="modal " data-modalName="edit">
+    <div class="modal__body edit-modal-body">
         <div class="modal__header">
-            <span class="modal__title">Edit product</span>
+            <span class="modal__title">Edit “Active Coat Lorem Ipsum Dolor Sit Amet Consectetur </span>
             <span class="modal__close-sign close-modal">&times;</span>
         </div>
-        <div class="modal__content">
+        <div class="modal__content ">
             <div class="modal-edit">
-                <div class="modal-edit__top">
-                    <div class="modal-edit__left">
-                        <div class="modal-edit__content">
-                            <p>Name</p>
-                            <input class="modal-edit__input" type="text" placeholder="Name">
-                            <p>Category</p>
-                            <select class="modal-edit__input">
+                <div class="modal-edit--top">
+                    <div class="top-left">
+                        <div class="">
+                            <label for="input-name">Name</label>
+                            <input class="text-input" type="text" placeholder="Name" id="input-name">
+                        </div>
+                        <div class="">
+                            <label>Category</label>
+                            <select class="select-white">
                                 <option>Active wear</option>
                                 <option>Sport wear</option>
                                 <option>Casual wear</option>
-                            </select>
-                            <p>Gender</p>
-                            <div class="modal-edit__radio">
-                                <label>
-                                    <input type="radio" name="gender">
+                            </select></div>
+                        <div>
+                            <label>Gender</label>
+                            <div class="radio-btn-group">
+                                <label class="radio-container">
+                                    <input type="radio" checked="checked" name="gender">
+                                    <span class="checkmark"></span>
                                     Male
                                 </label>
-                                <label>
+                                <label class="radio-container">
                                     <input type="radio" name="gender">
                                     Female
+                                    <span class="checkmark"></span>
                                 </label>
-                                <label>
+                                <label class="radio-container">
                                     <input type="radio" name="gender">
+                                    <span class="checkmark"></span>
                                     Unisex
                                 </label>
                             </div>
-                            <p>Description</p>
-                            <textarea class="modal-edit__input" cols="30" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <label for="textarea-description">Description</label>
+                            <textarea class="" cols="30" rows="10" id="textarea-description"></textarea>
                         </div>
                     </div>
-                    <div class="modal-edit__right">
-                        <div class="modal-edit__content">
-                            <p>Link to image:</p>
-                            <input class="modal-edit__input" type="text">
-                            <img class="product-img"
-                                 src="https://digitalcontent.api.tesco.com/v1/media/tescomobile/handsets/iphone_x_silver_pureangles_400.png"
-                                 alt="img">
-                            <p>Price:</p>
-                            <input class="modal-edit__input" type="number">
-                            <p>Rating:</p>
-                            <input class="modal-edit__input" type="number">
+                    <div class="top-right">
+                        <div>
+                            <label for="input-link">Link to image:</label>
+                            <input class="text-input" type="url" id="input-link"></div>
+                        <div class="top-right--image">
+                            <img src="https://picsum.photos/400/200/?image=24" alt="img">
+                        </div>
+                        <div>
+                            <label for="input-price">Price:</label>
+                            <input class="text-input" id="input-price" type="number">
+                        </div>
+                        <div>
+                            <label for="select-rating">Rating:</label>
+                            <select class="select-white" id="select-rating">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="modal-edit__bottom">
-                    <button class="btn close-modal">Submit</button>
-                    <button class="btn close-modal">Cancel</button>
+                <div class="modal-edit--bottom">
+                    <button class="btn-primary-big close-modal">Submit</button>
+                    <button class="btn-secondary-big close-modal">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--___Add modal___-->
-<div class="modal" data-modalName="add">
-    <div class="modal__body">
-        <div class="modal__header">
-            <span class="modal__title">Add more</span>
-            <span class="modal__close-sign close-modal">&times;</span>
-        </div>
-        <div class="modal__content">
-            <div class="add-modal">
-                <p>Add more</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--___Delete modal___-->
 
-<div class="modal" data-modalName="delete">
-    <div class="modal__body">
+<div class="modal delete-active " data-modalName="delete">
+    <div class="modal__body delete-modal">
         <div class="modal__header">
             <span class="modal__title">Delete item</span>
             <span class="modal__close-sign close-modal">&times;</span>
         </div>
-        <div class="modal__content">
+        <div class="modal__content ">
             <div class="delete-modal">
-                <p>Are you sure that you want delete this item?</p>
-                <div>
-                    <button class="btn close-modal">Yes</button>
-                    <button class="btn close-modal">No</button>
+                <p>You are trying to delete this product.
+                    Are you sure you want this?
+                </p>
+                <div class="delete-modal--controls">
+                    <button class="btn-secondary-big close-modal">Cancel</button>
+                    <button class="btn-primary-big close-modal">Submit</button>
                 </div>
             </div>
 
@@ -156,15 +178,18 @@
     </div>
 </div>
 <!--___Buy modal___-->
-<div class="modal" data-modalName="buy">
-    <div class="modal__body">
+<div class="modal buy-active" data-modalName="buy">
+    <div class="modal__body buy-modal">
         <div class="modal__header">
-            <span class="modal__title">Buy</span>
+            <span class="modal__title">Thank you!</span>
             <span class="modal__close-sign close-modal">&times;</span>
         </div>
         <div class="modal__content">
             <div class="buy-modal">
-                <p>You successfully purchased this item</p>
+                <p>You successfully purchased
+                    this item.</p>
+                <button class="btn-primary-big close-modal">Continue shopping</button>
+
             </div>
         </div>
     </div>

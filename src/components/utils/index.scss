@@ -68,6 +68,40 @@ a {
   }
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+
+  a {
+    padding-bottom: 2px;
+    border-bottom: 2px solid $color-white;
+  }
+  div {
+    font-size: 15px;
+    color: $color-white;
+
+    span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+  }
+}
+
+ul {
+  list-style: none;
+
+  li {
+    display: inline;
+  }
+}
+
+b, i {
+  color: $color-yellow;
+}
+
 .rating {
   position: absolute;
   bottom: 0;
@@ -91,17 +125,6 @@ a {
 
 }
 
-ul {
-  list-style: none;
-  li {
-    display: inline;
-  }
-}
-
-b, i {
-  color: $color-yellow;
-}
-
 .quote {
   font-size: 34px;
   font-style: italic;
@@ -109,7 +132,7 @@ b, i {
   margin: 10px;
   opacity: 1;
 
-  &:before,&:after {
+  &:before, &:after {
     content: '';
     width: 20px;
     height: 15px;
@@ -124,6 +147,7 @@ b, i {
     transform: rotate(180deg);
   }
 }
+
 .btn-primary-regular {
   @include create-button();
 }
@@ -141,12 +165,17 @@ b, i {
 }
 
 .text-input {
-  @include  text-input();
+  @include text-input();
 }
 
 .select-green {
-  @include select('down-salect-white.svg',$color-mixed-green);
+  @include select('down-select-white.svg', $color-mixed-green);
 }
+
 .select-white {
-  @include select('down-salect-green.svg',$color-white,$color-black)
+  @include select('down-select-green2.svg', $color-white, $color-black)
+}
+
+.radio-btn-group {
+  @include radio-group();
 }
