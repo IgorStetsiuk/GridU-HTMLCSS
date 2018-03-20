@@ -12,23 +12,31 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
   }
 
   .product {
-    height: 460px;
     color: $color-black;
     margin-bottom: 30px;
-    flex-basis: 360px;
+    flex-basis: 32%;
+
+
+    @include respond-to($large-desktop) {
+      flex-basis: 49%;
+
+    }
+
+    @include respond-to($tablet-portrait) {
+      flex-basis: 100%;
+
+    }
 
     &--picture {
-      min-width: 0;
       position: relative;
 
       img {
         display: block;
-        width: 360px;
         max-width: 100%;
-        max-height: 450px;
       }
     }
 
@@ -148,7 +156,7 @@
   background-color: $color-white;
   padding: 20px;
   margin-top: 10px;
-  width: 65%;
+  width: 66%;
   top: 100%;
   right: 0;
   border-radius: 15px;
@@ -259,7 +267,6 @@
       border: 1px solid #288575;
       border-radius: 25px;
 
-
       input {
         display: none;
       }
@@ -297,10 +304,10 @@
         }
         &:not(:checked) + .slider {
           background-color: $color-mixed-green;
-          &:before{
+          &:before {
             background: $color-white;
           }
-      }
+        }
 
         &:focus .slider {
           box-shadow: 0 0 1px $color-mixed-green;
