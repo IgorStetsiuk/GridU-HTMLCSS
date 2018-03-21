@@ -1,12 +1,12 @@
 class Review {
     constructor(leaveReview) {
         this.leaveReview = leaveReview;
-        this.leaveReview.addEventListener('click', this.showReviewEditor.bind(this));
+        this.applyTrigerListener(this.leaveReview);
     }
 
 
     showReviewEditor(e) {
-        this.keepedLeaveReviewHTML = getByClass('leave-review').innerHTML;
+        this.keptLeaveReviewHTML = getByClass('leave-review').innerHTML;
         e.target.parentElement.innerHTML = `Share your thoughts with other customers:`;
         this.initEditorListeners();
     }
@@ -30,6 +30,10 @@ class Review {
 
         });
     }
+    
+    applyTrigerListener(element){
+	    element.addEventListener('click', this.showReviewEditor.bind(this));
+    }
 
     applyEditorListeners() {
         const textArea = getById('author-review');
@@ -46,6 +50,7 @@ class Review {
             }
         })
     }
+	
 
     applyEditorMethod(action) {
         switch (action) {
@@ -144,7 +149,11 @@ class Review {
         getByClass('submit-controls').addEventListener('click', ({target}) => {
             if (target.id === 'cancel-btn') {
                 getByClass('review').style.display = 'none';
-                getByClass('leave-review').innerHTML = this.keepedLeaveReviewHTML;
+                const triggerBlock =  getByClass('leave-review');
+	            triggerBlock.innerHTML = this.keptLeaveReviewHTML;
+	            this.applyTrigerListener(triggerBlock);
+             
+	            
             }
             if (target.id === 'submit-btn') {
                 alert('You review has been saved');
