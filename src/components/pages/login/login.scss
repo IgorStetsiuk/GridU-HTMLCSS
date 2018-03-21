@@ -1,8 +1,5 @@
-@import "../../utils/variables";
 @import "../../utils/index";
 @import "../../shared/modal/modal";
-@import "../../utils/button";
-@import "../../utils/mixins";
 
 section {
   display: flex;
@@ -55,6 +52,7 @@ section {
         align-self: flex-end;
         width: 150px;
         height: 50px;
+        color: $color-white;
 
       }
     }

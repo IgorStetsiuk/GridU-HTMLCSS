@@ -152,7 +152,6 @@ class Review {
                 const triggerBlock =  getByClass('leave-review');
 	            triggerBlock.innerHTML = this.keptLeaveReviewHTML;
 	            this.applyTrigerListener(triggerBlock);
-             
 	            
             }
             if (target.id === 'submit-btn') {
