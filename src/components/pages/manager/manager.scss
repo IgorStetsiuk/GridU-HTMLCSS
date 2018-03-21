@@ -2,24 +2,25 @@
 @import "../../shared/footer/footer";
 @import "../../utils/index";
 
-.content {
-  height: 85vh;
-}
-.analytics {
+.analytic {
   display: flex;
-}
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
 
-.analytics img {
-  width: 600px;
-  height: 100%;
-}
+  &--image {
+    flex-basis: 48%;
 
-@media only screen and (max-width: 1200px) {
-  .analytics {
-    flex-direction: column;
-    align-items: center;
-  }
-  .analytics img {
-    width: 90%;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    @include respond-to($tablet-portrait) {
+      flex-basis: 100%;
+      img {
+        height: initial;
+      }
+    }
   }
 }
