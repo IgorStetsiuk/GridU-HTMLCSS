@@ -18,10 +18,11 @@
                 <!--_________ Login form __________-->
                 <div class="login-form">
                     <form>
-                        <label>Your login:</label>
-                        <input type="text" minlength="4" placeholder="Login" pattern="[A-Za-z]{4,12}">
+                        <label for="name">Your login:</label>
+                        <input id="name" type="text" minlength="4" placeholder="Login" pattern="[A-Za-z]{4,12}">
                         <label for="password"> Your password:</label>
-                        <input id="password" type="password" minlength="4" maxlength="12" placeholder="Password">
+                        <input id="password" type="text" minlength="4" maxlength="12"
+                               placeholder="Password">
                         <a href="../main/main.html" target="_blank" class="btn-primary-regular">Submit</a>
                     </form>
                 </div>
@@ -29,6 +30,15 @@
         </div>
     </div>
 </section>
+<script>
+  (() => {
+    const input = document.querySelector("#password");
+    input.addEventListener('input', ({ target }) => {
+      !target.checkValidity()? target.classList.add('invalid'):target.classList.remove('invalid');
+      target.value = target.value.replace(/./g, '*')
+    })
+  })();
 
+</script>
 </body>
 </html>

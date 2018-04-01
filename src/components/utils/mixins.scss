@@ -18,7 +18,7 @@
 }
 
 @mixin get-background($imgUrl) {
-  background: $color-white url("../../../../assets/images/login-form/#{$imgUrl}") no-repeat 97% 50%;
+  background: $color-white url("../../../../assets/images/login-form/#{$imgUrl}") no-repeat 97.9% 50%;
   background-size: 40px;
 
 }
@@ -58,10 +58,10 @@
   &:focus:invalid, &:focus:invalid {
     border: 2px solid $color-error;
     @include get-background($invalid);
-
   }
+
   &:invalid {
-    border: 2px solid $color-white;
+    border: 2px solid $color-error;
     @include get-background($invalid);
   }
 

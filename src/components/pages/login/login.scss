@@ -59,22 +59,12 @@ section {
         margin-bottom: 21px;
       }
 
-      input[type="password"] {
+      input#password {
         margin-bottom: 27px;
-
       }
-      input[type="text"] {
-        background-position: 97.7% 50%;
 
-        &:focus:valid {
-          background-position: 97.7% 50%;
-
-        }
-
-        &:focus:invalid {
-          background-position: 97.7% 50%;
-
-        }
+      input#name {
+        background-position: 98.1% 50%;
       }
 
       a {
@@ -94,3 +84,7 @@ section {
   }
 }
 
+#password.invalid {
+    border: 2px solid $color-error;
+    @include get-background($img-login-password-invalid)
+}
