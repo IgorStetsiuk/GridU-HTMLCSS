@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login page</title>
-    <link rel="stylesheet" href="../../compile/pages/login/login.css">
+    <link rel="stylesheet" href="../../../compile/pages/login/login.css">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
   (() => {
     const input = document.querySelector("#password");
     input.addEventListener('input', ({ target }) => {
-      !target.checkValidity()? target.classList.add('invalid'):target.classList.remove('invalid');
+      !target.checkValidity() ? target.classList.add('invalid') : target.classList.remove('invalid');
       target.value = target.value.replace(/./g, '*')
     })
   })();
