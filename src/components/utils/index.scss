@@ -14,12 +14,22 @@
   src: url("../../../../assets/fonts/PT_Sans-Web-Bold.ttf");
 }
 
+@font-face {
+  font-family: "PT Sans Caption Regular";
+  src: url("../../../../assets/fonts/PT_Sans-Caption-Web-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PT Sans Caption Bold";
+  src: url("../../../../assets/fonts/PT_Sans-Caption-Web-Bold.ttf");
+}
+
 html, body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   font-size: $font-size-main;
-  color: $color-text-white;
+  color: $color-white;
   @include font-family-PTSans-regular();
 
 }

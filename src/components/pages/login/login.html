@@ -8,9 +8,7 @@
 <body>
 
 <section>
-    <button class="open-modal btn-primary-regular" data-modalName="login">Login</button>
 
-    <!--_________ Modal __________-->
     <div class="modal" data-modalName="login">
         <div class="modal__body">
             <div class="modal__header">
@@ -21,14 +19,10 @@
                 <div class="login-form">
                     <form>
                         <label>Your login:</label>
-                        <input type="text" minlength="4" maxlength="12" placeholder="Login"
-                               >
-                        <span></span>
+                        <input type="text" minlength="4" placeholder="Login" pattern="[A-Za-z]{4,12}">
                         <label for="password"> Your password:</label>
-                        <input id="password" type="password" minlength="4" maxlength="12"
-                               placeholder="Password" >
-                        <button class="close-modal btn-primary-regular">Submit</button>
-                        <span></span>
+                        <input id="password" type="password" minlength="4" maxlength="12" placeholder="Password">
+                        <a href="../main/main.html" target="_blank" class="btn-primary-regular">Submit</a>
                     </form>
                 </div>
             </div>
@@ -37,5 +31,4 @@
 </section>
 
 </body>
-<script src="../../shared/modal/modal.js"></script>
 </html>

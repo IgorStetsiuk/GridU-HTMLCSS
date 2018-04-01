@@ -5,7 +5,8 @@
   background: linear-gradient(180deg,  $first-color  0%,  $second-color  100%);
 
   &:active {
-    background: linear-gradient(0deg, $first-color 100%, $second-color 0%);
+    background: linear-gradient(0deg, $first-color 0%, $second-color 100%);
+    box-shadow: inset 2px 2px 4px 0 rgba(0,0,0,0.3);
   }
 
   &:disabled {

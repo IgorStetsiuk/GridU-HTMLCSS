@@ -9,8 +9,16 @@
   font-family: "PT Sans Bold", serif;
 }
 
+@mixin font-family-PTSans-Caption-Regular() {
+  font-family: "PT Sans Caption Regular", serif;
+}
+
+@mixin font-family-PTSans-Caption-Bold() {
+  font-family: "PT Sans Caption Bold", serif;
+}
+
 @mixin get-background($imgUrl) {
-  background: $color-white url("../../../../assets/images/login-form/#{$imgUrl}") no-repeat 95% 50%;
+  background: $color-white url("../../../../assets/images/login-form/#{$imgUrl}") no-repeat 97% 50%;
   background-size: 40px;
 
 }

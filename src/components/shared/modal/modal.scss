@@ -4,12 +4,6 @@
 
 .modal {
   display: none;
-  //
-  ////remove
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-
   position: fixed;
   z-index: 1;
   left: 0;
@@ -18,7 +12,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 
   & *{
     color: $color-black;
@@ -39,7 +33,6 @@
   }
 
   &__header {
-    padding: 5px 40px;
     height: 70px;
     position: relative;
     display: flex;
@@ -53,7 +46,7 @@
   &__close-sign {
     position: absolute;
     right: 20px;
-    color: $color-pad;
+    color: $color-dark-gray;
     font-size: $font-size-middle;
     font-weight: bold;
 

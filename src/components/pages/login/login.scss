@@ -6,33 +6,44 @@ section {
   justify-content: center;
   align-items: center;
 
-
   .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &__title {
-      @include font-family-PTSans-bold();
+      @include font-family-PTSans-Caption-Regular();
+      font-size: 22px;
+      line-height: 29px;
+      font-weight: bold;
     }
     &__body {
       max-width: 570px;
       width: 80%;
+      display: block;
+
     }
   }
 
   .login-form {
     display: flex;
-    height: 300px;
     justify-content: center;
 
     form {
-      width: 80%;
+      margin-top: 30px;
+      width: 79%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
       label {
-        margin-top: 20px;
+        font-size: $font-size-x-large;
+        margin-bottom: 5px;
+        line-height: 23px;
       }
 
       input {
+        border: 2px solid transparent;
         font-size: 22px;
         padding: 15px 20px;
         width: 100%;
@@ -45,14 +56,38 @@ section {
 
       input:nth-of-type(1) {
         @include input-states($img-login-login-active, $img-login-login-inactive, $img-login-login-invalid);
+        margin-bottom: 21px;
       }
 
-      button {
-        margin-top: 20px;
+      input[type="password"] {
+        margin-bottom: 27px;
+
+      }
+      input[type="text"] {
+        background-position: 97.7% 50%;
+
+        &:focus:valid {
+          background-position: 97.7% 50%;
+
+        }
+
+        &:focus:invalid {
+          background-position: 97.7% 50%;
+
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         align-self: flex-end;
-        width: 150px;
+        width: 170px;
         height: 50px;
         color: $color-white;
+        font-size: $font-size-x-large;
+        margin-bottom: 30px;
+        @include font-family-PTSans-Caption-Regular();
 
       }
     }
