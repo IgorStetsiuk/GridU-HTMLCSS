@@ -5,7 +5,7 @@
     <title>Main page</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../compile/pages/main/main.css">
 </head>
 <body>
@@ -31,16 +31,20 @@
                 <div class="tool-bar--filter">
                     <div class="filter">
                         <button id="filter-btn" class="btn-primary-regular">Filter options</button>
-                        <!--Filter popup-->
+                        <!----- Filter popup ----->
                         <div id="filter-popup" class="filter-popup">
                             <div class="filter-popup--content">
                                 <div class="filter-popup--top">
                                     <div class="available">
                                         <p>Availability:</p>
-                                        <label class="switch">
-                                            <input class="checkbox" type="checkbox">
-                                            <span class="slider round"></span>
-                                        </label>
+                                        <div>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+
+                                            </label>
+                                            <span>Available only</span>
+                                        </div>
                                     </div>
                                     <div class="gender">
                                         <p>Gender:</p>
@@ -52,7 +56,7 @@
                                             </label>
                                             <label class="radio-container">
                                                 <input type="radio" name="gender">
-                                                Female
+                                                Woman
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
@@ -72,16 +76,28 @@
                                     </div>
                                 </div>
                                 <div class="filter-popup--bottom">
-                                    <div>
-                                        <label for="amount">Price range:</label>
-                                        <input type="text" id="amount" readonly>
+                                    <div class="rating-slider">
+                                        <label>Rating:</label>
+                                        <div id="rating-slider"></div>
+                                       <div>
+                                           <span>1</span>
+                                           <span>3</span>
+                                       </div>
                                     </div>
-                                    <div id="slider-range"></div>
+                                    <div class="price-slider">
+                                        <label>Price:</label>
+                                        <div id="price-slider"></div>
+                                       <div>
+                                           <span>100</span>
+                                           <span>400</span>
+                                       </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!----- Search bar ------->
                 <div class="tool-bar--search">
                     <div class="search">
                         <input class="text-input" type="text" placeholder="Filter by text...">
@@ -105,11 +121,14 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div class="product--top">
+                            <h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p>
+                        </div>
                         <div class="product--price">
-                          <span class="product--cost"><span>$</span>47,95</span>
+                            <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
                         </div>
                     </div>
@@ -127,9 +146,12 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div>
+                            <div><h3 class="product--name">Name of product</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus
+                                    impedit maiores
+                                    non odit quod recusandae repellat sapiente ullam.</p></div>
+                        </div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -149,9 +171,12 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Active Coat Lorem Ipsum Dolor Sit Amet
+                            Consectetur Adipisicing Elit.3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Adipisci aperiam, libero aliquid architecto ad quis
+                                maiores sit nulla officiis ex velit sapiente autem fugit
+                                quam, qui reprehenderit veniam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>78800.00</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -171,9 +196,10 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -193,9 +219,10 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -215,9 +242,10 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -237,9 +265,10 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -259,9 +288,10 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Name of product</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit
+                                maiores
+                                non odit quod recusandae repellat sapiente ullam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>47,95</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -281,9 +311,12 @@
                     </div>
 
                     <div class="product--purchase">
-                        <h3 class="product--name">Name of product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur delectus impedit maiores
-                            non odit quod recusandae repellat sapiente ullam.</p>
+                        <div><h3 class="product--name">Active Coat Lorem Ipsum Dolor Sit Amet
+                            Consectetur Adipisicing Elit.3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Adipisci aperiam, libero aliquid architecto ad quis
+                                maiores sit nulla officiis ex velit sapiente autem fugit
+                                quam, qui reprehenderit veniam.</p></div>
                         <div class="product--price">
                             <span class="product--cost"><span>$</span>100.54</span>
                             <button class="btn-primary-regular">Show more</button>
@@ -297,11 +330,11 @@
 
 <footer>
     <div class="container">
-        <p class="footer-title">Demo Shop</p>
+        <p class="footer-title">Copyright “Demo Shop”, 2017</p>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="../../shared/filter-popup/filter.js"></script>
+<script src="./filter.js"></script>
 </body>
 </html>

@@ -33,6 +33,7 @@
   color: $color-white;
   border-radius: 5px;
   outline: none;
+  @include font-family-PTSans-regular();
 
 
 }

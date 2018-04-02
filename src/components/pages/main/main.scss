@@ -20,7 +20,6 @@
     margin-bottom: 30px;
     flex-basis: 32%;
 
-
     @include respond-to($large-desktop) {
       flex-basis: 49%;
 
@@ -61,19 +60,22 @@
 
     &--purchase {
       background: url("../../../../assets/decor/modal-bg.png");
-      padding: 20px;
+      padding: 15px;
+      height: 219px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       h3 {
         @include font-family-PTSans-bold();
         font-size: 18px;
-        padding: 9px 0;
+        padding-bottom: 9px;
         border-bottom: 2px solid #3FC5CB;
       }
 
       p {
         font-size: 14px;
         padding: 9px 0;
-        margin-bottom: 30px;
       }
     }
 
@@ -81,6 +83,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      button {
+        width: 120px;
+        height: 35px;
+        padding: 8px;
+        line-height: 19px;
+      }
     }
 
     &--cost {
@@ -111,18 +120,18 @@
 
   &--tools-btn {
     display: flex;
-    flex-basis: 350px;
+    flex-basis: 389px;
     justify-content: space-between;
     align-items: center;
 
   }
   &--filter {
 
-    > button {
-      padding: 10px 20px;
+    button {
+      width: 140px;
       background-color: $color-dark-green;
-      border-radius: 5px;
-      color: $color-white;
+      line-height: 19px;
+      @include font-family-PTSans-regular();
 
       &:focus {
         outline: none;
@@ -144,8 +153,16 @@
 
       i {
         font-size: 20px;
-        color: $color-black;
+        color: $color-bright-gray;
       }
+    }
+
+    input {
+      font-size: 14px;
+      height: 35px;
+      width: 235px;
+      padding: 9px 17px;
+      @include font-family-PTSans-regular();
     }
   }
 }
@@ -154,7 +171,7 @@
   display: none;
   position: absolute;
   background-color: $color-white;
-  padding: 20px;
+  padding: 17px 24px 10px;
   margin-top: 10px;
   width: 66%;
   top: 100%;
@@ -182,7 +199,8 @@
     flex-wrap: wrap;
 
     p {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      font-size: 12px;
     }
 
     @include respond-to($tablet-portrait) {
@@ -199,84 +217,140 @@
       flex-direction: column;
     }
 
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 27px;
-      border: 1px solid #288575;
-      border-radius: 25px;
+    .available {
 
-      input {
-        display: none;
-      }
+      div {
+        display: flex;
+        align-items: center;
 
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: $color-mixed-green;
-        -webkit-transition: .4s;
-        transition: .4s;
-
-        &:before {
-          position: absolute;
-          content: "";
-          height: 20px;
-          width: 20px;
-          left: 4px;
-          bottom: 3px;
-          background-color: $color-mixed-green;
-          -webkit-transition: .4s;
-          transition: .4s;
-        }
-
-      }
-
-      input[type="checkbox"] {
-
-        &:checked + .slider {
-          background-color: $color-white;
-
-        }
-        &:not(:checked) + .slider {
-          background-color: $color-mixed-green;
-          &:before {
-            background: $color-white;
-          }
-        }
-
-        &:focus .slider {
-          box-shadow: 0 0 1px $color-mixed-green;
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 42px;
+          height: 24px;
+          border: 1px solid #288575;
+          border-radius: 34px;
+          margin-right: 6px;
         }
       }
 
-      .checkbox:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
+    }
+
+    .gender {
+      .radio-btn-group {
+        margin-top: 8px;
       }
-
-      .slider.round {
-        border-radius: 25px;
-
-        &:before {
-          border-radius: 50%;
-        }
-
+    }
+    .category {
+      .select-green {
+        width: 235px;
       }
     }
 
+    input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 2px;
+      right: 0;
+      bottom: 0;
+      -webkit-transition: .4s;
+      transition: .4s;
+      background-color: $color-white;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      bottom: 1px;
+      background-color: $color-mixed-green;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: $color-white;
+
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(16px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
   }
 
   &--bottom {
-    padding-top: 15px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
 
     @include respond-to($tablet-portrait) {
+      flex-direction: column;
+      padding-left: 7px;
       margin: 20px 0 20px;
+
+      .rating-slider, .price-slider {
+        width: 100%;
+      }
+      .rating-slider {
+        margin-bottom: 14px;
+      }
+      .price-slider {
+        label {
+          margin-left: 4px;
+        }
+        margin-left: -3px;
+      }
+    }
+
+    div > span {
+      font-size: 12px;
+      @include font-family-PTSans-regular();
+    }
+
+    label {
+      font-size: 12px;
+      @include font-family-PTSans-regular();
+      margin-bottom: 6px;
+
+    }
+
+    .rating-slider, .price-slider {
+      width: 235px;
+
+      & > div {
+        margin-top: 8px;
+
+        span:first-of-type {
+          margin-right: 130px;
+
+        }
+      }
+
+    }
+
+    .price-slider {
+      width: 350px;
+      & > div {
+        span:first-of-type {
+          margin-right: 179px;
+          margin-left: -2px;
+        }
+      }
     }
 
     input {
@@ -285,7 +359,7 @@
       font-weight: bold;
     }
 
-    #slider-range {
+    #rating-slider, #price-slider {
       margin-top: 15px;
 
       & > div {
@@ -310,14 +384,14 @@
     content: "";
     position: absolute;
     bottom: 100%;
-    right: 275px;
+    right: 310px;
     margin-left: 6px;
     border: 5px solid;
     border-color: transparent transparent #fff transparent;
 
     @include respond-to($tablet-portrait) {
       right: initial;
-      left: 50px;
+      left: 57px;
     }
   }
 
@@ -325,6 +399,11 @@
 
 .open {
   display: block;
+}
+
+.active {
+  background: linear-gradient(0deg, $color-light-green 0%, $color-green 100%);
+  box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .ui-widget.ui-widget-content {
