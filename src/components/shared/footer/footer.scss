@@ -4,4 +4,13 @@ footer {
   background: $color-primary-main;
   text-align: center;
   padding: 15px 0;
+  font-size: 15px;
+
+  span  {
+    line-height: 19px;
+    & > span {
+      margin-bottom: 1px;
+      border-bottom: 1px solid $color-white;
+    }
+  }
 }

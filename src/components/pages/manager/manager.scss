@@ -7,7 +7,9 @@
   padding-top: 20px;
 
   &--image {
-    flex-basis: 48%;
+    height: 340px;
+    width: 49.5%;
+    display: flex;
 
     img {
       max-width: 100%;
@@ -15,10 +17,14 @@
     }
 
     @include respond-to($tablet-portrait) {
+      &:first-child {
+        margin-bottom: 20px;
+      }
       flex-basis: 100%;
       img {
         height: initial;
       }
     }
+
   }
 }
