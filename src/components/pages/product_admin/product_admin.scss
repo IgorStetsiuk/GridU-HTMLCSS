@@ -38,6 +38,7 @@
     &--picture {
       position: relative;
       flex-basis: 350px;
+      max-width: 525px;
       flex-grow: 1;
 
       div {
@@ -57,7 +58,7 @@
       color: $color-black;
       flex-basis: 350px;
       flex-grow: 1;
-      padding-left: 20px;
+      padding-left: 22px;
 
       @include respond-to($tablet-portrait) {
         margin-top: 20px;
@@ -67,13 +68,14 @@
 
     &--title {
       padding-bottom: 15px;
-      margin-bottom: 14px;
+      margin-bottom: 14.33px;
       border-bottom: 2px solid #3FC5CB;
       font-size: 24px;
 
     }
     &--description {
       font-size: 16px;
+      line-height: 20px;
       p {
         margin-bottom: 20px;
 
@@ -91,7 +93,15 @@
       width: 100%;
       padding-top: 10px;
       border-top: 1px solid #D6D6D6;
+
+      button {
+        width: 120px;
+        @include font-family-PTSans-regular;
+        font-size: 14px;
+      }
     }
+
+
 
   }
 }
