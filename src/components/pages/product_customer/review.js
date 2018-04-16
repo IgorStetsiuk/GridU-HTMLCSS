@@ -1,7 +1,7 @@
 class Review {
     constructor(leaveReview) {
         this.leaveReview = leaveReview;
-        this.applyTrigerListener(this.leaveReview);
+        this.applyTriggerListener(this.leaveReview);
     }
 
 
@@ -12,7 +12,9 @@ class Review {
     }
 
     initEditorListeners() {
-        getByClass('review').style.display = 'block';
+        let display = el => el.style.display = 'block';
+        display(getByClass('review'));
+        display(getById('review-text'));
         const authorNameAvatar = getById('author-avatar');
         authorNameAvatar.addEventListener('change', this.handleUploadedAvatar.bind(this));
         this.listenInputChange('author-name', 'name-preview');
@@ -31,7 +33,7 @@ class Review {
         });
     }
     
-    applyTrigerListener(element){
+    applyTriggerListener(element){
 	    element.addEventListener('click', this.showReviewEditor.bind(this));
     }
 
@@ -149,9 +151,10 @@ class Review {
         getByClass('submit-controls').addEventListener('click', ({target}) => {
             if (target.id === 'cancel-btn') {
                 getByClass('review').style.display = 'none';
+                getById('review-text').style.display = 'none';
                 const triggerBlock =  getByClass('leave-review');
 	            triggerBlock.innerHTML = this.keptLeaveReviewHTML;
-	            this.applyTrigerListener(triggerBlock);
+	            this.applyTriggerListener(triggerBlock);
 	            
             }
             if (target.id === 'submit-btn') {

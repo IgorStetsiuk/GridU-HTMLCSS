@@ -87,7 +87,7 @@
   }
 
   .leave-review {
-    margin: 0 auto 50px;
+    margin: 0 auto;
     text-align: center;
 
     a {
@@ -97,6 +97,13 @@
     &--hide {
       display: none;
     }
+  }
+
+  .leave-review + p {
+    line-height: 32px;
+    font-size: 24px;
+    @include font-family-PTSans-Caption-Bold;
+    display: none;
   }
 
   .review {
@@ -281,7 +288,7 @@
       .comment {
         flex: 1 0 450px;
 
-        @include respond-to($tablet-portrait){
+        @include respond-to($tablet-portrait) {
           flex: auto;
         }
 
@@ -342,7 +349,7 @@
           display: flex;
           justify-content: space-between;
 
-          @include respond-to('(max-width:600px)'){
+          @include respond-to('(max-width:600px)') {
             justify-content: center;
 
             div:first-child {
@@ -405,12 +412,15 @@
 .hide {
   display: none;
 }
+
 #emphasize-btn {
   width: 84px;
 }
-#bold-btn{
+
+#bold-btn {
   width: 54px;
 }
+
 #quote-btn {
   width: 58px;
 }
