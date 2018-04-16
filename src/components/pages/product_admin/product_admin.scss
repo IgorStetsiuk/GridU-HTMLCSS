@@ -120,7 +120,9 @@
 .modal-edit {
   display: flex;
   flex-direction: column;
-  padding: 23px;
+  padding: 23px 40px 30px;
+
+
 
   .text-input {
     padding: 10px;
@@ -136,18 +138,23 @@
       flex-direction: column;
       flex-basis: 47%;
 
+
       & > div {
-        margin-bottom: 20px;
+        margin-bottom: 17px;
         display: flex;
         flex-direction: column;
       }
 
       input[type="url"]:invalid {
         border: 2px solid $color-error;
+        font-size: 14px;
+        line-height: 17px;
       }
 
       label {
         margin-bottom: 5px;
+        font-size: 16px;
+        @include font-family-PTSans-regular();
       }
 
       img {
@@ -174,6 +181,10 @@
         width: 100%;
       }
 
+      .radio-btn-group {
+        margin-top: 0;
+      }
+
       @include respond-to($tablet-portrait) {
         flex-basis: 100%;
       }
@@ -193,7 +204,7 @@
       color: $color-white;
 
       &:first-child {
-        margin-right: 48px;
+        margin-right: 20px;
       }
     }
   }
@@ -225,6 +236,7 @@
       padding: 30px;
       height: 200px;
 
+
       p {
         margin-bottom: 30px;
         @include respond-to($tablet-portrait) {
@@ -237,6 +249,7 @@
       button {
         color: $color-white;
         align-self: flex-end;
+        padding: 0;
       }
 
     }
@@ -272,3 +285,20 @@
 }
 
 
+.btn-primary-big, .btn-secondary-big {
+  width: 170px;
+  height: 50px;
+}
+
+.top-right--image {
+  img {
+    height: 200px;
+  }
+}
+
+#textarea-description {
+  margin-bottom: 10px;
+}
+#input-price {
+  line-height: 17px;
+}

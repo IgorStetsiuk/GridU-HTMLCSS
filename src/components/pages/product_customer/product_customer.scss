@@ -40,6 +40,7 @@
     &--slider {
       position: relative;
       flex-basis: 350px;
+      max-width: 525px;
       flex-grow: 1;
 
     }
@@ -77,6 +78,10 @@
       width: 100%;
       padding-top: 10px;
       border-top: 1px solid #D6D6D6;
+
+      button {
+        width: 120px;
+      }
     }
 
   }
@@ -183,7 +188,7 @@
       color: $color-black;
       border: 3px solid #3FC5CB;
       position: relative;
-      padding: 25px;
+      padding: 30px;
       display: flex;
       flex-wrap: wrap;
       background: url("../../../../assets/decor/modal-bg.png");
@@ -191,6 +196,7 @@
       .review-profile {
         padding-right: 20px;
         flex: 1 1 200px;
+        max-width: 235px;
 
         @include respond-to($tablet-portrait) {
           padding-right: 0;
@@ -214,6 +220,7 @@
             border-radius: 5px;
             outline: none;
             border: 2px solid transparent;
+            height: 35px;
 
             @include font-family-PTSans-regular();
             &:focus {
@@ -245,6 +252,7 @@
               font-style: italic;
               opacity: 0.5;
               color: $color-black;
+              font-size: 14px;
             }
 
             label {
@@ -315,7 +323,7 @@
             width: 100%;
             border-radius: 5px;
             padding: 15px;
-            height: 190px;
+            height: 178px;
             resize: none;
             font-size: 16px;
             line-height: 20px;
@@ -352,6 +360,11 @@
             }
           }
           .submit-controls {
+            button {
+              width: 120px;
+              height: 35px;
+
+            }
             button:first-child {
               margin-right: 10px;
             }
@@ -392,4 +405,12 @@
 .hide {
   display: none;
 }
-
+#emphasize-btn {
+  width: 84px;
+}
+#bold-btn{
+  width: 54px;
+}
+#quote-btn {
+  width: 58px;
+}
